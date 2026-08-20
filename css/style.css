@@ -13,11 +13,13 @@
   --glass-shadow: rgba(15, 23, 42, 0.08);
 }
 
-body {
+html, body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg-light);
   color: var(--text-main);
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  max-width: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -62,10 +64,11 @@ a:hover {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   z-index: -1; 
   pointer-events: none;
+  overflow: hidden;
 }
 
 /* Glassmorphism Classes */
@@ -327,12 +330,39 @@ footer h3, footer h5 {
 /* Responsive adjustments */
 @media (max-width: 991px) {
   .hero-title { font-size: 3rem; }
+  
   .navbar-collapse {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 66px); /* approximate navbar height */
+      background: #ffffff !important;
+      padding: 20px 0 40px 0;
+      overflow-y: auto;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      border-top: 1px solid rgba(0,0,0,0.05);
+      z-index: 1020;
+      transform: translateZ(0); /* Fix webkit bleeding */
+  }
+
+  .navbar-nav {
+      flex-direction: column;
+      width: 100%;
+      padding: 0 20px;
+  }
+  
+  .navbar-nav .nav-item {
+      width: 100%;
+      text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+      font-size: 1.1rem;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      display: block;
+      width: 100%;
   }
 }
 
@@ -505,7 +535,7 @@ footer h3, footer h5 {
 .preloader {
     position: fixed;
     top: 0; left: 0;
-    width: 100vw; height: 100vh;
+    width: 100%; height: 100vh;
     background: var(--bg-light);
     display: flex;
     justify-content: center;

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing & Packages - AutoNeo</title>
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Three.js Background Container -->
+    <div id="three-canvas-container"></div>
+
+    <!-- Section 1: Navbar -->
+    <div id="header-placeholder"></div>
+
+    <!-- Section 2: Hero Section -->
+    <section class="page-hero">
+        <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=2000&auto=format&fit=crop');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content text-center text-white" data-aos="zoom-in" data-aos-duration="1500">
+            <h1 class="hero-title text-white" style="color: #fff !important;">Transparent <span class="text-gradient">Pricing</span></h1>
+            <p class="hero-subtitle text-white" style="color: #fff !important; opacity: 0.9;">No hidden fees, no surprises. Choose the right plan for your vehicle.</p>
+        </div>
+    </section>
+
+    <!-- Section 3: Plans Grid -->
+    <section class="pricing-plans py-5">
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+                <!-- Plan 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-panel text-center p-5">
+                        <h4 class="mb-3">Standard</h4>
+                        <h2 class="text-gradient mb-4">$99<span class="fs-6 text-muted">/visit</span></h2>
+                        <ul class="list-unstyled text-start text-muted mb-4">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Oil & Filter Change</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> 50-Point Inspection</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Tire Rotation</li>
+                            <li class="mb-2 text-decoration-line-through opacity-50"><i class="fas fa-times me-2"></i> Computer Diagnostics</li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-outline-custom w-100">Choose Plan</a>
+                    </div>
+                </div>
+                <!-- Plan 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-panel text-center p-5 position-relative" style="border-color: var(--primary-color);">
+                        <span class="badge bg-linear-accent position-absolute top-0 start-50 translate-middle px-3 py-2 rounded-pill">Most Popular</span>
+                        <h4 class="mb-3 mt-2">Premium</h4>
+                        <h2 class="text-gradient mb-4">$199<span class="fs-6 text-muted">/visit</span></h2>
+                        <ul class="list-unstyled text-start text-muted mb-4">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Synthetic Oil Change</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> 100-Point Inspection</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Computer Diagnostics</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Fluid Top-up</li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-custom w-100">Choose Plan</a>
+                    </div>
+                </div>
+                <!-- Plan 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="glass-panel text-center p-5">
+                        <h4 class="mb-3">Ultimate</h4>
+                        <h2 class="text-gradient mb-4">$399<span class="fs-6 text-muted">/visit</span></h2>
+                        <ul class="list-unstyled text-start text-muted mb-4">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Everything in Premium</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Full System Flush</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Brake Pad Check & Clean</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Spark Plug Inspection</li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-outline-custom w-100">Choose Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Comparison Table -->
+    <section class="comparison-table py-5 bg-linear-accent">
+        <div class="container" data-aos="fade-up">
+            <h3 class="mb-5 text-center">Feature Comparison</h3>
+            <div class="glass-panel p-4 overflow-auto">
+                <table class="table table-dark table-striped table-hover text-white mb-0" style="background: transparent;">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="bg-transparent border-secondary">Features</th>
+                            <th scope="col" class="text-center bg-transparent border-secondary">Standard</th>
+                            <th scope="col" class="text-center bg-transparent border-secondary">Premium</th>
+                            <th scope="col" class="text-center bg-transparent border-secondary">Ultimate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="bg-transparent border-secondary">Oil Change</td>
+                            <td class="text-center bg-transparent border-secondary"><i class="fas fa-check text-primary"></i></td>
+                            <td class="text-center bg-transparent border-secondary"><i class="fas fa-check text-primary"></i></td>
+                            <td class="text-center bg-transparent border-secondary"><i class="fas fa-check text-primary"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="bg-transparent border-secondary">Points Inspection</td>
+                            <td class="text-center bg-transparent border-secondary">50-Point</td>
+                            <td class="text-center bg-transparent border-secondary">100-Point</td>
+                            <td class="text-center bg-transparent border-secondary">Comprehensive</td>
+                        </tr>
+                        <tr>
+                            <td class="bg-transparent border-secondary">Computer Diagnostics</td>
+                            <td class="text-center bg-transparent border-secondary"><i class="fas fa-times text-muted"></i></td>
+                            <td class="text-center bg-transparent border-secondary"><i class="fas fa-check text-primary"></i></td>
+                            <td class="text-center bg-transparent border-secondary"><i class="fas fa-check text-primary"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="bg-transparent border-secondary">Full System Flush</td>
+                            <td class="text-center bg-transparent border-secondary"><i class="fas fa-times text-muted"></i></td>
+                            <td class="text-center bg-transparent border-secondary"><i class="fas fa-times text-muted"></i></td>
+                            <td class="text-center bg-transparent border-secondary"><i class="fas fa-check text-primary"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Add-ons -->
+    <section class="addons py-5">
+        <div class="container" data-aos="fade-up">
+            <h3 class="mb-4 text-center">Available Add-ons</h3>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="glass-panel text-center p-4">
+                        <i class="fas fa-snowflake fa-2x text-primary mb-3"></i>
+                        <h5>A/C Recharge</h5>
+                        <p class="text-gradient fs-4 mb-0">+$49</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="glass-panel text-center p-4">
+                        <i class="fas fa-broom fa-2x text-primary mb-3"></i>
+                        <h5>Detailing</h5>
+                        <p class="text-gradient fs-4 mb-0">+$89</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="glass-panel text-center p-4">
+                        <i class="fas fa-tools fa-2x text-primary mb-3"></i>
+                        <h5>Tire Alignment</h5>
+                        <p class="text-gradient fs-4 mb-0">+$69</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="glass-panel text-center p-4">
+                        <i class="fas fa-car-battery fa-2x text-primary mb-3"></i>
+                        <h5>Battery Replacement</h5>
+                        <p class="text-gradient fs-4 mb-0">+$120</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Membership Info -->
+    <section class="membership py-5 bg-linear-main">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <h5 class="text-gradient">Join the Club</h5>
+                    <h2 class="mb-4">AutoNeo Elite Membership</h2>
+                    <p class="text-muted mb-4">Subscribe to our yearly plan and get unlimited diagnostics, 20% off all parts, and priority booking.</p>
+                    <a href="contact.html" class="btn btn-custom">Become a Member</a>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="glass-panel p-4 text-center">
+                        <h3 class="mb-3">Elite Tier</h3>
+                        <h1 class="text-gradient display-4 fw-bold">$299<span class="fs-6 text-muted">/year</span></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Enterprise/Fleet info -->
+    <section class="fleet-info py-5">
+        <div class="container text-center" data-aos="zoom-in">
+            <div class="glass-panel p-5 mx-auto border border-secondary" style="max-width: 800px;">
+                <i class="fas fa-truck fa-3x text-gradient mb-3"></i>
+                <h3 class="mb-3">Enterprise & Fleet Management</h3>
+                <p class="text-muted mb-4">Have more than 5 vehicles? We offer custom volume pricing for corporate fleets, delivery services, and enterprise clients.</p>
+                <a href="contact.html" class="btn btn-outline-custom">Contact Sales</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: FAQ -->
+    <section class="faq-section py-5 bg-linear-accent">
+        <div class="container" data-aos="fade-up">
+            <h3 class="mb-5 text-center">Frequently Asked Questions</h3>
+            <div class="accordion" id="pricingFaq" style="--bs-accordion-bg: transparent; --bs-accordion-color: #fff;">
+                <div class="accordion-item glass-panel mb-3 border-0">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-transparent text-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            Are there any hidden fees?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                        <div class="accordion-body text-muted">
+                            No! At AutoNeo, the price you see is the price you pay. Any extra parts or labor needed will always be quoted and approved by you beforehand.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item glass-panel mb-3 border-0">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-transparent text-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            Can I upgrade my package later?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                        <div class="accordion-body text-muted">
+                            Yes, you can upgrade your service package at the shop before work begins. Our master technicians can also recommend the best plan after an initial check.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: CTA -->
+    <section class="cta py-5 text-center">
+        <div class="container" data-aos="fade-up">
+            <h2 class="mb-4">Ready to upgrade your car care experience?</h2>
+            <a href="booking.html" class="btn btn-custom btn-lg">Book Your Service Now</a>
+        </div>
+    </section>
+
+    <!-- Section 10: Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/three-bg.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

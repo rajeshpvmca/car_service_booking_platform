@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - AutoNeo Car Service</title>
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Three.js Background Container -->
+    <div id="three-canvas-container"></div>
+
+    <!-- Section 1: Navbar -->
+    <div id="header-placeholder"></div>
+
+    <!-- Section 2: Header -->
+    <section class="page-header py-5 mt-5">
+        <div class="container text-center pt-5 mt-5" data-aos="fade-down">
+            <h1 class="display-4 font-weight-bold"><span class="text-gradient">Frequently</span> Asked Questions</h1>
+            <p class="lead text-muted">Find quick answers to common questions about our services.</p>
+        </div>
+    </section>
+
+    <!-- Section 3: General Qs -->
+    <section class="general-qs py-5 bg-linear-main">
+        <div class="container">
+            <div class="section-title text-center mb-5" data-aos="fade-up">
+                <h5 class="text-gradient">Basics</h5>
+                <h2>General Questions</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="accordion glass-panel p-3" id="generalAccordion">
+                        <div class="accordion-item bg-transparent border-secondary border-bottom">
+                            <h2 class="accordion-header" id="genHeadingOne">
+                                <button class="accordion-button bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#genCollapseOne">
+                                    What makes AutoNeo different from a regular garage?
+                                </button>
+                            </h2>
+                            <div id="genCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#generalAccordion">
+                                <div class="accordion-body text-muted">
+                                    We combine top-tier mechanical expertise with advanced software integration. You get a transparent, tech-driven experience, complete with an app to track your service, digital diagnostics, and direct communication with mechanics.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-transparent border-0">
+                            <h2 class="accordion-header" id="genHeadingTwo">
+                                <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#genCollapseTwo">
+                                    Do you service all car makes and models?
+                                </button>
+                            </h2>
+                            <div id="genCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#generalAccordion">
+                                <div class="accordion-body text-muted">
+                                    Yes, our certified technicians are trained to work on a wide variety of vehicles, including domestic, import, and specialized performance cars. We also have a dedicated EV and Hybrid team.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Booking Qs -->
+    <section class="booking-qs py-5">
+        <div class="container">
+            <div class="section-title text-center mb-5" data-aos="fade-up">
+                <h5 class="text-gradient">Scheduling</h5>
+                <h2>Booking & Drop-off</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="accordion glass-panel p-3" id="bookingAccordion">
+                        <div class="accordion-item bg-transparent border-secondary border-bottom">
+                            <h2 class="accordion-header" id="bookHeadingOne">
+                                <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#bookCollapseOne">
+                                    How do I book an appointment?
+                                </button>
+                            </h2>
+                            <div id="bookCollapseOne" class="accordion-collapse collapse" data-bs-parent="#bookingAccordion">
+                                <div class="accordion-body text-muted">
+                                    You can easily book through our website by clicking the 'Book Now' button, or by using the AutoNeo mobile app. Select your required service, choose a time slot, and confirm.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-transparent border-0">
+                            <h2 class="accordion-header" id="bookHeadingTwo">
+                                <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#bookCollapseTwo">
+                                    Do you offer a pickup and drop-off service?
+                                </button>
+                            </h2>
+                            <div id="bookCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#bookingAccordion">
+                                <div class="accordion-body text-muted">
+                                    Yes! For a small additional fee, our valets will pick up your car from your home or office and return it when the service is complete.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Payment Qs -->
+    <section class="payment-qs py-5 bg-linear-main">
+        <div class="container">
+            <div class="section-title text-center mb-5" data-aos="fade-up">
+                <h5 class="text-gradient">Billing</h5>
+                <h2>Payment Info</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="accordion glass-panel p-3" id="payAccordion">
+                        <div class="accordion-item bg-transparent border-secondary border-bottom">
+                            <h2 class="accordion-header" id="payHeadingOne">
+                                <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#payCollapseOne">
+                                    When do I pay for my service?
+                                </button>
+                            </h2>
+                            <div id="payCollapseOne" class="accordion-collapse collapse" data-bs-parent="#payAccordion">
+                                <div class="accordion-body text-muted">
+                                    Payment is typically processed only after the service is completed and you have reviewed our digital inspection report and approved the work.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-transparent border-0">
+                            <h2 class="accordion-header" id="payHeadingTwo">
+                                <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#payCollapseTwo">
+                                    What payment methods do you accept?
+                                </button>
+                            </h2>
+                            <div id="payCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#payAccordion">
+                                <div class="accordion-body text-muted">
+                                    We accept all major credit cards, Apple Pay, Google Pay, and directly through the AutoNeo app for maximum convenience.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Warranty Info -->
+    <section class="warranty-info py-5">
+        <div class="container">
+            <div class="section-title text-center mb-5" data-aos="fade-up">
+                <h5 class="text-gradient">Peace of Mind</h5>
+                <h2>Warranty</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-panel p-4 text-center">
+                        <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                        <h4>2-Year / 24,000 Mile Warranty</h4>
+                        <p class="text-muted">We stand behind our work. All our parts and labor come with a standard 2-year or 24,000-mile nationwide warranty. If any part we installed fails or our repair doesn't hold up, we fix it for free.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Service Specifics -->
+    <section class="service-specifics py-5 bg-linear-main">
+        <div class="container">
+            <div class="section-title text-center mb-5" data-aos="fade-up">
+                <h5 class="text-gradient">Details</h5>
+                <h2>Service Specifics</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="accordion glass-panel p-3" id="serviceAccordion">
+                        <div class="accordion-item bg-transparent border-secondary border-bottom">
+                            <h2 class="accordion-header" id="svcHeadingOne">
+                                <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#svcCollapseOne">
+                                    Can I see what's wrong with my car?
+                                </button>
+                            </h2>
+                            <div id="svcCollapseOne" class="accordion-collapse collapse" data-bs-parent="#serviceAccordion">
+                                <div class="accordion-body text-muted">
+                                    Absolutely. Our mechanics use tablets to take photos and videos of your vehicle's issues. We send a digital inspection report directly to your phone so you can see exactly what needs to be fixed.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-transparent border-0">
+                            <h2 class="accordion-header" id="svcHeadingTwo">
+                                <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#svcCollapseTwo">
+                                    How long does a standard service take?
+                                </button>
+                            </h2>
+                            <div id="svcCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#serviceAccordion">
+                                <div class="accordion-body text-muted">
+                                    Most standard services (like our Standard or Premium packages) take about 1 to 2 hours. More complex repairs will require an estimated timeline, which we will communicate clearly to you.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Ask a Question Form -->
+    <section class="ask-form py-5">
+        <div class="container">
+            <div class="section-title text-center mb-5" data-aos="fade-up">
+                <h5 class="text-gradient">Need more info?</h5>
+                <h2>Ask a Question</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-6" data-aos="zoom-in">
+                    <form class="glass-panel p-4">
+                        <div class="mb-3">
+                            <label class="form-label text-muted">Your Name</label>
+                            <input type="text" class="form-control bg-dark text-white border-secondary" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-muted">Email Address</label>
+                            <input type="email" class="form-control bg-dark text-white border-secondary" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label text-muted">Question</label>
+                            <textarea class="form-control bg-dark text-white border-secondary" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-custom w-100">Submit Question</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Contact Info -->
+    <section class="contact-info py-5 bg-linear-main">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-panel p-4 h-100">
+                        <i class="fas fa-phone-alt fa-2x text-gradient mb-3"></i>
+                        <h5>Call Us</h5>
+                        <p class="text-muted mb-0">+1 (555) 123-4567</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-panel p-4 h-100">
+                        <i class="fas fa-envelope fa-2x text-gradient mb-3"></i>
+                        <h5>Email Us</h5>
+                        <p class="text-muted mb-0">support@autoneo.com</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="glass-panel p-4 h-100">
+                        <i class="fas fa-map-marker-alt fa-2x text-gradient mb-3"></i>
+                        <h5>Visit Us</h5>
+                        <p class="text-muted mb-0">123 Neon Avenue, Cyber City</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: CTA Newsletter -->
+    <section class="newsletter py-5">
+        <div class="container text-center" data-aos="zoom-in">
+            <div class="glass-panel p-5 mx-auto" style="max-width: 700px;">
+                <h3 class="mb-3">Stay Updated</h3>
+                <p class="text-muted mb-4">Subscribe for the latest tips, tricks, and special service discounts.</p>
+                <form class="d-flex">
+                    <input type="email" class="form-control me-2 bg-dark text-white border-secondary" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-custom">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 11: Footer -->
+    <footer class="pt-5 bg-linear-main">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <h3 class="text-gradient mb-4">AutoNeo</h3>
+                    <p class="text-muted pe-lg-4">The ultimate modern platform for all your automotive maintenance, repair, and performance needs. Driven by technology, focused on quality.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="pricing.html" class="footer-link">Pricing</a>
+                    <a href="booking.html" class="footer-link">Book Now</a>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-4">Extra</h5>
+                    <a href="team.html" class="footer-link">Our Team</a>
+                    <a href="blog.html" class="footer-link">Blog</a>
+                    <a href="faq.html" class="footer-link">FAQ</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-4">Contact Info</h5>
+                    <p class="text-muted"><i class="fas fa-map-marker-alt me-2 text-primary"></i> 123 Neon Avenue, Cyber City</p>
+                    <p class="text-muted"><i class="fas fa-phone me-2 text-primary"></i> +1 (555) 123-4567</p>
+                    <p class="text-muted"><i class="fas fa-envelope me-2 text-primary"></i> support@autoneo.com</p>
+                </div>
+            </div>
+            <div class="row border-top border-secondary pt-4 mt-4">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted mb-0">&copy; 2026 AutoNeo Platform. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="text-muted mb-0">Designed with modern flair.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.css"></script> <!-- Bootstrap script requires JS bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/three-bg.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

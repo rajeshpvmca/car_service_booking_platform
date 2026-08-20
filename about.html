@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AutoNeo</title>
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Three.js Background Container -->
+    <div id="three-canvas-container"></div>
+
+    <!-- Section 1: Navbar -->
+    <div id="header-placeholder"></div>
+
+    <!-- Section 2: Hero Section -->
+    <section class="page-hero">
+        <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1563212048-03299723cf71?q=80&w=2000&auto=format&fit=crop');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content text-center text-white" data-aos="zoom-in" data-aos-duration="1500">
+            <h1 class="hero-title text-white" style="color: #fff !important;">Discover <span class="text-gradient">AutoNeo</span></h1>
+            <p class="hero-subtitle text-white" style="color: #fff !important; opacity: 0.9;">Pioneering the future of automotive care through innovation and expertise.</p>
+        </div>
+    </section>
+
+    <!-- Section 3: Our Story -->
+    <section class="story-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="glass-panel p-2">
+                        <img src="https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=800&auto=format&fit=crop" class="img-fluid rounded" alt="Our Story">
+                    </div>
+                </div>
+                <div class="col-lg-6 px-lg-5" data-aos="fade-left">
+                    <h5 class="text-gradient mb-2">Our Origins</h5>
+                    <h2 class="mb-4">How AutoNeo Began</h2>
+                    <p class="text-muted mb-4">Founded in 2020 by a team of software engineers and master mechanics, AutoNeo was born out of frustration with the opaque and outdated traditional auto repair industry.</p>
+                    <p class="text-muted">We realized that cars were evolving into supercomputers on wheels, yet the way they were serviced hadn't changed in decades. AutoNeo integrates proprietary diagnostic AI with hands-on mechanical excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Mission & Vision -->
+    <section class="mission-vision bg-linear-main">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="glass-panel h-100 p-5">
+                        <i class="fas fa-bullseye fa-3x text-gradient mb-4"></i>
+                        <h3 class="mb-3">Our Mission</h3>
+                        <p class="text-muted">To provide transparent, high-tech, and reliable automotive services that empower drivers and prolong vehicle lifespans.</p>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="glass-panel h-100 p-5">
+                        <i class="fas fa-eye fa-3x text-gradient mb-4"></i>
+                        <h3 class="mb-3">Our Vision</h3>
+                        <p class="text-muted">To be the global standard for smart garage solutions, seamlessly blending automotive mechanical engineering with cutting-edge software.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Core Values -->
+    <section class="core-values">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <h5 class="text-gradient">What Drives Us</h5>
+                <h2>Our Core Values</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-panel text-center h-100">
+                        <i class="fas fa-check-double fa-2x text-primary mb-3"></i>
+                        <h4>Transparency</h4>
+                        <p class="text-muted">No hidden fees, no unnecessary repairs. Just honest recommendations and upfront pricing.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-panel text-center h-100">
+                        <i class="fas fa-microchip fa-2x text-primary mb-3"></i>
+                        <h4>Innovation</h4>
+                        <p class="text-muted">We continuously upgrade our tech stack to diagnose and repair your car with absolute precision.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="glass-panel text-center h-100">
+                        <i class="fas fa-handshake fa-2x text-primary mb-3"></i>
+                        <h4>Reliability</h4>
+                        <p class="text-muted">You depend on your vehicle, and you can depend on us to keep it running smoothly and safely.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Stats/Metrics -->
+    <section class="stats bg-linear-accent py-5">
+        <div class="container">
+            <div class="row text-center text-white">
+                <div class="col-md-3 col-6 mb-4 mb-md-0" data-aos="zoom-in" data-aos-delay="100">
+                    <h2 class="display-4 fw-bold">15k+</h2>
+                    <p class="mb-0 opacity-75">Vehicles Serviced</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4 mb-md-0" data-aos="zoom-in" data-aos-delay="200">
+                    <h2 class="display-4 fw-bold">50+</h2>
+                    <p class="mb-0 opacity-75">Certified Techs</p>
+                </div>
+                <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="300">
+                    <h2 class="display-4 fw-bold">99%</h2>
+                    <p class="mb-0 opacity-75">Satisfaction Rate</p>
+                </div>
+                <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="400">
+                    <h2 class="display-4 fw-bold">24/7</h2>
+                    <p class="mb-0 opacity-75">Customer Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Team Snippet -->
+    <section class="team-snippet">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                    <h5 class="text-gradient mb-2">Leadership</h5>
+                    <h2 class="mb-4">Meet The Minds Behind AutoNeo</h2>
+                    <p class="text-muted mb-4">Our diverse team of engineers, automotive specialists, and customer success managers work tirelessly to ensure the best possible experience for our clients.</p>
+                    <a href="team.html" class="btn btn-outline-custom">View Full Directory</a>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="glass-panel text-center p-3">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;" alt="CEO">
+                                <h5>Michael Chang</h5>
+                                <p class="text-gradient small">CEO & Founder</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="glass-panel text-center p-3">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;" alt="CTO">
+                                <h5>Elena Rostova</h5>
+                                <p class="text-gradient small">Chief Technology Officer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Awards & Certifications -->
+    <section class="awards bg-linear-main">
+        <div class="container text-center">
+            <div class="section-title" data-aos="fade-up">
+                <h5 class="text-gradient">Recognition</h5>
+                <h2>Certifications & Awards</h2>
+            </div>
+            <div class="row justify-content-center align-items-center g-4" data-aos="fade-up">
+                <div class="col-md-2 col-4">
+                    <div class="glass-panel p-3">
+                        <i class="fas fa-award fa-3x text-muted"></i>
+                        <p class="mt-2 mb-0 small">ASE Certified</p>
+                    </div>
+                </div>
+                <div class="col-md-2 col-4">
+                    <div class="glass-panel p-3">
+                        <i class="fas fa-certificate fa-3x text-muted"></i>
+                        <p class="mt-2 mb-0 small">Tech Innovator 2024</p>
+                    </div>
+                </div>
+                <div class="col-md-2 col-4">
+                    <div class="glass-panel p-3">
+                        <i class="fas fa-trophy fa-3x text-muted"></i>
+                        <p class="mt-2 mb-0 small">Best Auto Shop</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Gallery Snippet -->
+    <section class="gallery-snippet">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <h5 class="text-gradient">Inside Our Facility</h5>
+                <h2>State-of-the-Art Garage</h2>
+            </div>
+            <div class="row g-3" data-aos="zoom-in">
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?q=80&w=600&auto=format&fit=crop" class="img-fluid rounded w-100" style="height: 250px; object-fit: cover;" alt="Garage Area 1">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1503375535948-26f536762394?q=80&w=600&auto=format&fit=crop" class="img-fluid rounded w-100" style="height: 250px; object-fit: cover;" alt="Garage Area 2">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=600&auto=format&fit=crop" class="img-fluid rounded w-100" style="height: 250px; object-fit: cover;" alt="Garage Area 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Call to Action -->
+    <section class="cta text-center py-5">
+        <div class="container" data-aos="fade-up">
+            <h2 class="mb-4">Ready to Experience the AutoNeo Difference?</h2>
+            <a href="booking.html" class="btn btn-custom btn-lg me-2 mb-2">Book Your Appointment</a>
+            <a href="contact.html" class="btn btn-outline-custom btn-lg mb-2">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Section 11: Newsletter -->
+    <section class="newsletter bg-linear-main py-5">
+        <div class="container text-center" data-aos="zoom-in">
+            <div class="glass-panel p-5 mx-auto" style="max-width: 700px;">
+                <h3 class="mb-3">Subscribe for Offers</h3>
+                <p class="text-muted mb-4">Get the latest news and special discounts directly to your inbox.</p>
+                <form class="d-flex">
+                    <input type="email" class="form-control me-2" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-custom">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 12: Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.css"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/three-bg.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

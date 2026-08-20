@@ -109,7 +109,7 @@ a:hover {
   color: var(--primary-color) !important;
 }
 
-.navbar-brand .text-white {
+.navbar-brand {
     color: var(--text-main) !important; /* Force 'Neo' to be dark on light navbar */
 }
 
@@ -289,12 +289,11 @@ section {
 .glass-panel p, .glass-panel li {
     color: var(--text-muted);
 }
-.glass-panel .text-white {
+.glass-panel  {
     color: var(--text-main) !important;
 }
 
-/* Overriding Bootstrap text-white and text-muted if misused on light theme */
-body > section:not(.hero-section) .text-white {
+body > section:not(.hero-section)  {
     color: var(--text-main) !important;
 }
 
@@ -447,3 +446,10 @@ footer h3, footer h5 {
 /* Continuous Testimonial Swiper Marquee */
 .testimonials-swiper .swiper-wrapper { transition-timing-function: linear !important; }
 
+
+/* Fix for giant background watermark icons in cards */
+.service-card-hover:hover .bg-watermark-icon {
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.05) !important;
+    color: rgba(255, 255, 255, 0.05) !important;
+    transform: none !important;
+}

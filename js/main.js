@@ -111,3 +111,49 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
 
+
+// Number Counter Animation
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter-number');
+    
+    // Formatting function for numbers (e.g. 15000 -> 15k)
+    const formatNumber = (num, target) => {
+        if (target == 15000 && num >= 1000) {
+            return (num / 1000).toFixed(num % 1000 === 0 ? 0 : 1) + 'k';
+        }
+        return Math.floor(num);
+    };
+
+    const animateCounter = (counter) => {
+        const target = +counter.getAttribute('data-target');
+        const duration = 2000; // 2 seconds
+        const stepTime = 20; 
+        const steps = duration / stepTime;
+        const increment = target / steps;
+        let current = 0;
+
+        const updateCounter = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                counter.innerText = target == 15000 ? '15k' : target;
+                clearInterval(updateCounter);
+            } else {
+                counter.innerText = formatNumber(current, target);
+            }
+        }, stepTime);
+    };
+
+    // Intersection Observer to trigger when visible
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                obs.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+});

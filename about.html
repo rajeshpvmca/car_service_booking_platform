@@ -23,83 +23,193 @@
     <div id="header-placeholder"></div>
 
     <!-- Section 2: Hero Section -->
-    <section class="page-hero">
-        <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1563212048-03299723cf71?q=80&w=2000&auto=format&fit=crop');"></div>
-        <div class="hero-overlay"></div>
-        <div class="container hero-content text-center text-white" data-aos="zoom-in" data-aos-duration="1500">
-            <h1 class="hero-title text-white" style="color: #fff !important;">Discover <span class="text-gradient">Stackly</span></h1>
-            <p class="hero-subtitle text-white" style="color: #fff !important; opacity: 0.9;">Pioneering the future of automotive care through innovation and expertise.</p>
+        <section class="pt-5 mt-5 page-hero d-flex align-items-center position-relative" style="min-height: 80vh;">
+        <div class="page-hero-bg position-absolute w-100 h-100" style="top: 0; left: 0; background-image: url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=2000&auto=format&fit=crop'); background-size: cover; background-position: center;"></div>
+        <div class="hero-overlay position-absolute w-100 h-100" style="top: 0; left: 0; background: linear-gradient(to bottom, rgba(10, 15, 25, 0.8) 0%, rgba(10, 15, 25, 0.4) 100%);"></div>
+        <div class="container hero-content text-center position-relative" style="z-index: 2;">
+            <span class="badge rounded-pill px-3 py-2 shadow-sm mb-3" style="background-color: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); letter-spacing: 1px; color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; text-shadow: 0 2px 4px rgba(0,0,0,0.8);" data-aos="fade-down" data-aos-delay="100">ABOUT OUR PLATFORM</span>
+            <h1 class="hero-title fw-bold mb-3 mx-auto text-white" style="text-shadow: 0 4px 20px rgba(0,0,0,0.8); font-size: clamp(2.2rem, 8vw, 4.5rem); line-height: 1.2; max-width: 800px;" data-aos="fade-up" data-aos-delay="200">
+                <span style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;">Discover</span> <span class="text-gradient" style="-webkit-text-fill-color: transparent !important;">Stackly</span>
+            </h1>
+            <p class="hero-subtitle text-white mx-auto mb-5" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8); -webkit-text-fill-color: #ffffff !important; opacity: 1 !important; font-size: clamp(1rem, 4vw, 1.25rem); max-width: 700px; line-height: 1.6;" data-aos="fade-up" data-aos-delay="300">
+                Pioneering the future of automotive care through unparalleled innovation, AI diagnostics, and hands-on mechanical expertise.
+            </p>
+            <div class="d-flex justify-content-center gap-3 flex-column flex-sm-row px-3" data-aos="zoom-in" data-aos-delay="400">
+                <a href="#our-story" class="btn btn-custom rounded-pill px-5 py-3 fw-bold shadow-lg">Our Story</a>
+                <a href="contact.html" class="btn btn-outline-light rounded-pill px-5 py-3 fw-bold" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;">Get in Touch</a>
+            </div>
         </div>
     </section>
 
     <!-- Section 3: Our Story -->
-    <section class="story-section">
+    <section id="our-story" class=" py-5">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-                    <div class="glass-panel p-2">
-                        <img src="https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=800&auto=format&fit=crop" class="img-fluid rounded" alt="Our Story">
+            <div class="row align-items-center g-5">
+                <!-- Image Composition -->
+                <div class="col-lg-6 position-relative mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="position-absolute d-none d-md-block" style="top: -30px; left: -30px; width: 150px; height: 150px; background: radial-gradient(var(--primary-color) 2px, transparent 2px); background-size: 15px 15px; z-index: 0; opacity: 0.3;"></div>
+                    
+                    <div class="position-relative" style="z-index: 1;">
+                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop" class="img-fluid rounded-4 shadow-lg w-100" style="border: 4px solid #fff;" alt="Car Service Experts">
+                        
+                        <!-- Floating Glass Badge -->
+                        <div class="glass-panel position-absolute shadow-lg" style="bottom: -25px; right: 10px; border-radius: 16px; z-index: 2; display: flex; align-items: center; gap: 12px; padding: 15px 20px;">
+                            <div class="bg-linear-main text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 45px; height: 45px;">
+                                <i class="fas fa-car fs-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="mb-0 fw-bold" style="color: var(--text-main); font-size: 1.2rem;">1000+</h4>
+                                <small class="text-muted fw-bold" style="font-size: 0.75rem;">VEHICLES SERVICED</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6 px-lg-5" data-aos="fade-left">
-                    <h5 class="text-gradient mb-2">Our Origins</h5>
-                    <h2 class="mb-4">How Stackly Began</h2>
-                    <p class="text-muted mb-4">Founded in 2020 by a team of software engineers and master mechanics, Stackly was born out of frustration with the opaque and outdated traditional auto repair industry.</p>
-                    <p class="text-muted">We realized that cars were evolving into supercomputers on wheels, yet the way they were serviced hadn't changed in decades. Stackly integrates proprietary diagnostic AI with hands-on mechanical excellence.</p>
+
+                <!-- Content -->
+                <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
+                    <span class="badge rounded-pill px-3 py-2 shadow-sm mb-3" style="background-color: rgba(37, 99, 235, 0.1); color: var(--primary-color); border: 1px solid rgba(37, 99, 235, 0.2); letter-spacing: 1px;">ABOUT THE PLATFORM</span>
+                    <h2 class="fw-bold mb-4" style="font-size: clamp(2rem, 6vw, 3rem); line-height: 1.2;">Redefining <span class="text-gradient">Car Care</span></h2>
+                    
+                    <p class="text-muted mb-4 fs-5" style="line-height: 1.7;">
+                        Built with a vision to modernize the automotive repair industry, our platform was born out of frustration with unpredictable pricing, long wait times, and outdated scheduling methods.
+                    </p>
+                    <p class="text-muted mb-4" style="line-height: 1.7;">
+                        We realized that modern drivers need a seamless, digital-first approach to car maintenance. Our platform effortlessly bridges the gap between you and certified expert mechanics, ensuring complete transparency at every step.
+                    </p>
+                    
+                    <!-- Modern Feature List -->
+                    <div class="row g-3 mb-0 mt-3">
+                        <div class="col-12 col-sm-6">
+                            <div class="d-flex align-items-center bg-white p-3 rounded-3 shadow-sm border" style="border-color: rgba(0,0,0,0.05) !important;">
+                                <i class="fas fa-check-circle fs-4 me-3 text-gradient"></i>
+                                <span class="fw-bold text-dark" style="font-size: 0.95rem;">Proprietary AI Tech</span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="d-flex align-items-center bg-white p-3 rounded-3 shadow-sm border" style="border-color: rgba(0,0,0,0.05) !important;">
+                                <i class="fas fa-check-circle fs-4 me-3 text-gradient"></i>
+                                <span class="fw-bold text-dark" style="font-size: 0.95rem;">Master Mechanics</span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="d-flex align-items-center bg-white p-3 rounded-3 shadow-sm border" style="border-color: rgba(0,0,0,0.05) !important;">
+                                <i class="fas fa-check-circle fs-4 me-3 text-gradient"></i>
+                                <span class="fw-bold text-dark" style="font-size: 0.95rem;">Transparent Pricing</span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="d-flex align-items-center bg-white p-3 rounded-3 shadow-sm border" style="border-color: rgba(0,0,0,0.05) !important;">
+                                <i class="fas fa-check-circle fs-4 me-3 text-gradient"></i>
+                                <span class="fw-bold text-dark" style="font-size: 0.95rem;">Digital Reports</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 4: Mission & Vision -->
-    <section class="mission-vision bg-linear-main">
+    <!-- Section 4: Platform Advantage -->
+    <section class="py-5 bg-light position-relative">
         <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;" data-aos="fade-up">
+                <span class="badge rounded-pill px-3 py-2 shadow-sm mb-3" style="background-color: rgba(37, 99, 235, 0.1); color: var(--primary-color); border: 1px solid rgba(37, 99, 235, 0.2); letter-spacing: 1px;">THE PLATFORM ADVANTAGE</span>
+                <h2 class="fw-bold mb-3" style="font-size: clamp(2rem, 5vw, 2.5rem);">Why Choose Us?</h2>
+                <p class="text-muted">We're not just another garage. We are a complete digital ecosystem designed to make car maintenance effortless and transparent.</p>
+            </div>
+            
             <div class="row g-4">
-                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="glass-panel h-100 p-5">
-                        <i class="fas fa-bullseye fa-3x text-gradient mb-4"></i>
-                        <h3 class="mb-3">Our Mission</h3>
-                        <p class="text-muted">To provide transparent, high-tech, and reliable automotive services that empower drivers and prolong vehicle lifespans.</p>
+                <!-- Card 1 -->
+                <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card-hover bg-white h-100 p-4 rounded-4 shadow-sm border text-center" style="border-color: rgba(0,0,0,0.05) !important;">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-light rounded-circle mb-4" style="width: 70px; height: 70px;">
+                            <i class="fas fa-calendar-check fa-2x text-gradient"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3 h5">Instant Booking</h4>
+                        <p class="text-muted mb-0 small">Schedule your service in seconds with our intelligent calendar system. No phone calls needed.</p>
                     </div>
                 </div>
-                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="glass-panel h-100 p-5">
-                        <i class="fas fa-eye fa-3x text-gradient mb-4"></i>
-                        <h3 class="mb-3">Our Vision</h3>
-                        <p class="text-muted">To be the global standard for smart garage solutions, seamlessly blending automotive mechanical engineering with cutting-edge software.</p>
+                <!-- Card 2 -->
+                <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card-hover bg-white h-100 p-4 rounded-4 shadow-sm border text-center" style="border-color: rgba(0,0,0,0.05) !important;">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-light rounded-circle mb-4" style="width: 70px; height: 70px;">
+                            <i class="fas fa-shield-alt fa-2x text-gradient"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3 h5">Verified Mechanics</h4>
+                        <p class="text-muted mb-0 small">Every garage in our network passes a strict 50-point quality and certification audit.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card-hover bg-white h-100 p-4 rounded-4 shadow-sm border text-center" style="border-color: rgba(0,0,0,0.05) !important;">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-light rounded-circle mb-4" style="width: 70px; height: 70px;">
+                            <i class="fas fa-file-invoice-dollar fa-2x text-gradient"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3 h5">Clear Pricing</h4>
+                        <p class="text-muted mb-0 small">Get upfront estimates based on real-time parts data before you even drop off your keys.</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card-hover bg-white h-100 p-4 rounded-4 shadow-sm border text-center" style="border-color: rgba(0,0,0,0.05) !important;">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-light rounded-circle mb-4" style="width: 70px; height: 70px;">
+                            <i class="fas fa-headset fa-2x text-gradient"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3 h5">24/7 Support</h4>
+                        <p class="text-muted mb-0 small">Our dedicated support team is available around the clock to assist you with any service queries.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 5: Core Values -->
-    <section class="core-values">
+        <!-- Section 5: Core Values -->
+    <section class=" py-5">
         <div class="container">
-            <div class="section-title text-center" data-aos="fade-up">
-                <h5 class="text-gradient">What Drives Us</h5>
-                <h2>Our Core Values</h2>
+            <div class="section-title text-center mb-5" data-aos="fade-up">
+                <span class="badge rounded-pill px-3 py-2 shadow-sm mb-3 text-uppercase fw-bold" style="background-color: rgba(37, 99, 235, 0.1); color: var(--primary-color); border: 1px solid rgba(37, 99, 235, 0.2); letter-spacing: 1px;">What Drives Us</span>
+                <h2 class="display-5 fw-bold mb-3" style="font-size: clamp(2rem, 5vw, 3rem);">Our Core <span class="text-gradient">Values</span></h2>
+                <p class="text-muted mx-auto fs-5" style="max-width: 650px;">The uncompromising principles that guide every feature we build and every service we provide on our platform.</p>
             </div>
-            <div class="row g-4">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="glass-panel text-center h-100">
-                        <i class="fas fa-check-double fa-2x text-primary mb-3"></i>
-                        <h4>Transparency</h4>
-                        <p class="text-muted">No hidden fees, no unnecessary repairs. Just honest recommendations and upfront pricing.</p>
+            
+            <div class="row g-4 align-items-stretch">
+                <!-- Value 1 -->
+                <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card-hover glass-panel h-100 p-4 p-lg-5 position-relative overflow-hidden" style="border-radius: 24px;">
+                        <i class="fas fa-search position-absolute opacity-10 bg-watermark-icon" style="font-size: 8rem; right: -20px; bottom: -20px; color: var(--primary-color); z-index: 0;"></i>
+                        <div class="position-relative" style="z-index: 1;">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-light rounded-circle mb-4 shadow-sm" style="width: 60px; height: 60px;">
+                                <i class="fas fa-search fs-4 text-gradient"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">Absolute Transparency</h4>
+                            <p class="text-muted mb-0" style="line-height: 1.7;">No hidden fees, no unnecessary repairs. We mandate upfront pricing and visual proof from all garages on our platform.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="glass-panel text-center h-100">
-                        <i class="fas fa-microchip fa-2x text-primary mb-3"></i>
-                        <h4>Innovation</h4>
-                        <p class="text-muted">We continuously upgrade our tech stack to diagnose and repair your car with absolute precision.</p>
+                <!-- Value 2 -->
+                <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card-hover glass-panel h-100 p-4 p-lg-5 position-relative overflow-hidden" style="border-radius: 24px;">
+                        <i class="fas fa-rocket position-absolute opacity-10 bg-watermark-icon" style="font-size: 8rem; right: -20px; bottom: -20px; color: var(--primary-color); z-index: 0;"></i>
+                        <div class="position-relative" style="z-index: 1;">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-light rounded-circle mb-4 shadow-sm" style="width: 60px; height: 60px;">
+                                <i class="fas fa-rocket fs-4 text-gradient"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">Continuous Innovation</h4>
+                            <p class="text-muted mb-0" style="line-height: 1.7;">We continuously upgrade our tech stack to make booking, diagnosing, and repairing cars smoother and smarter than ever before.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="glass-panel text-center h-100">
-                        <i class="fas fa-handshake fa-2x text-primary mb-3"></i>
-                        <h4>Reliability</h4>
-                        <p class="text-muted">You depend on your vehicle, and you can depend on us to keep it running smoothly and safely.</p>
+                <!-- Value 3 -->
+                <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card-hover glass-panel h-100 p-4 p-lg-5 position-relative overflow-hidden" style="border-radius: 24px;">
+                        <i class="fas fa-shield-alt position-absolute opacity-10 bg-watermark-icon" style="font-size: 8rem; right: -20px; bottom: -20px; color: var(--primary-color); z-index: 0;"></i>
+                        <div class="position-relative" style="z-index: 1;">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-light rounded-circle mb-4 shadow-sm" style="width: 60px; height: 60px;">
+                                <i class="fas fa-shield-alt fs-4 text-gradient"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">Unwavering Reliability</h4>
+                            <p class="text-muted mb-0" style="line-height: 1.7;">Your safety is our priority. We only partner with elite mechanics who fix it right the first time, ensuring total peace of mind.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -107,53 +217,102 @@
     </section>
 
     <!-- Section 6: Stats/Metrics -->
-    <section class="stats bg-linear-accent py-5">
-        <div class="container">
-            <div class="row text-center text-white">
-                <div class="col-md-3 col-6 mb-4 mb-md-0" data-aos="zoom-in" data-aos-delay="100">
-                    <h2 class="display-4 fw-bold">15k+</h2>
-                    <p class="mb-0 opacity-75">Vehicles Serviced</p>
+    <section class=" position-relative py-5 overflow-hidden" style="border-radius: 30px; margin-left: 15px; margin-right: 15px;">
+        <!-- Premium Animated Background -->
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%); z-index: 0;"></div>
+        <div class="position-absolute w-100 h-100" style="top: 0; left: 0; background-image: radial-gradient(circle at 10% 50%, rgba(255,255,255,0.08) 0%, transparent 40%), radial-gradient(circle at 90% 50%, rgba(255,255,255,0.08) 0%, transparent 40%); z-index: 1;"></div>
+        
+        <div class="container position-relative py-4" style="z-index: 2;">
+            <div class="row text-center text-white g-4">
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-3">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-white bg-opacity-10 rounded-circle mb-3 shadow-sm" style="width: 70px; height: 70px; backdrop-filter: blur(5px);">
+                            <i class="fas fa-car-side fa-2x text-white" style="-webkit-text-fill-color: #fff !important;"></i>
+                        </div>
+                        <h2 class="display-4 fw-bold mb-2 d-flex justify-content-center align-items-center font-monospace" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; text-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                            <span class="counter-number" data-target="15000">0</span><span style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;">+</span>
+                        </h2>
+                        <p class="mb-0 fw-bold" style="color: rgba(255,255,255,0.9) !important; -webkit-text-fill-color: rgba(255,255,255,0.9) !important; letter-spacing: 1px;">VEHICLES SERVICED</p>
+                    </div>
                 </div>
-                <div class="col-md-3 col-6 mb-4 mb-md-0" data-aos="zoom-in" data-aos-delay="200">
-                    <h2 class="display-4 fw-bold">50+</h2>
-                    <p class="mb-0 opacity-75">Certified Techs</p>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-3">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-white bg-opacity-10 rounded-circle mb-3 shadow-sm" style="width: 70px; height: 70px; backdrop-filter: blur(5px);">
+                            <i class="fas fa-tools fa-2x text-white" style="-webkit-text-fill-color: #fff !important;"></i>
+                        </div>
+                        <h2 class="display-4 fw-bold mb-2 d-flex justify-content-center align-items-center font-monospace" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; text-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                            <span class="counter-number" data-target="50">0</span><span style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;">+</span>
+                        </h2>
+                        <p class="mb-0 fw-bold" style="color: rgba(255,255,255,0.9) !important; -webkit-text-fill-color: rgba(255,255,255,0.9) !important; letter-spacing: 1px;">CERTIFIED TECHS</p>
+                    </div>
                 </div>
-                <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="300">
-                    <h2 class="display-4 fw-bold">99%</h2>
-                    <p class="mb-0 opacity-75">Satisfaction Rate</p>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-3">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-white bg-opacity-10 rounded-circle mb-3 shadow-sm" style="width: 70px; height: 70px; backdrop-filter: blur(5px);">
+                            <i class="fas fa-smile-beam fa-2x text-white" style="-webkit-text-fill-color: #fff !important;"></i>
+                        </div>
+                        <h2 class="display-4 fw-bold mb-2 d-flex justify-content-center align-items-center font-monospace" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; text-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                            <span class="counter-number" data-target="99">0</span><span style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;">%</span>
+                        </h2>
+                        <p class="mb-0 fw-bold" style="color: rgba(255,255,255,0.9) !important; -webkit-text-fill-color: rgba(255,255,255,0.9) !important; letter-spacing: 1px;">SATISFACTION RATE</p>
+                    </div>
                 </div>
-                <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="400">
-                    <h2 class="display-4 fw-bold">24/7</h2>
-                    <p class="mb-0 opacity-75">Customer Support</p>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="p-3">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-white bg-opacity-10 rounded-circle mb-3 shadow-sm" style="width: 70px; height: 70px; backdrop-filter: blur(5px);">
+                            <i class="fas fa-headset fa-2x text-white" style="-webkit-text-fill-color: #fff !important;"></i>
+                        </div>
+                        <h2 class="display-4 fw-bold mb-2 d-flex justify-content-center align-items-center font-monospace" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; text-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                            <span class="counter-number" data-target="24">0</span><span style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;">/7</span>
+                        </h2>
+                        <p class="mb-0 fw-bold" style="color: rgba(255,255,255,0.9) !important; -webkit-text-fill-color: rgba(255,255,255,0.9) !important; letter-spacing: 1px;">CUSTOMER SUPPORT</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Section 7: Team Snippet -->
-    <section class="team-snippet">
+    <section class=" py-5">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
-                    <h5 class="text-gradient mb-2">Leadership</h5>
-                    <h2 class="mb-4">Meet The Minds Behind Stackly</h2>
-                    <p class="text-muted mb-4">Our diverse team of engineers, automotive specialists, and customer success managers work tirelessly to ensure the best possible experience for our clients.</p>
-                    <a href="team.html" class="btn btn-outline-custom">View Full Directory</a>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 text-center text-lg-start" data-aos="fade-right">
+                    <span class="badge rounded-pill px-3 py-2 shadow-sm mb-3 text-uppercase fw-bold" style="background-color: rgba(37, 99, 235, 0.1); color: var(--primary-color); border: 1px solid rgba(37, 99, 235, 0.2); letter-spacing: 1px;">LEADERSHIP</span>
+                    <h2 class="display-5 fw-bold mb-4" style="font-size: clamp(2rem, 5vw, 3rem);">Meet The Minds Behind The <span class="text-gradient">Platform</span></h2>
+                    <p class="text-muted mb-4 fs-5 mx-auto mx-lg-0" style="line-height: 1.7; max-width: 500px;">Our diverse team of software engineers, automotive specialists, and customer success managers work tirelessly to ensure the best possible experience for our clients.</p>
+                    <a href="team.html" class="btn btn-custom rounded-pill px-5 py-3 fw-bold shadow-lg mt-2">View Full Directory <i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
+                
                 <div class="col-lg-7" data-aos="fade-left">
-                    <div class="row g-3">
-                        <div class="col-sm-6">
-                            <div class="glass-panel text-center p-3">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;" alt="CEO">
-                                <h5>Michael Chang</h5>
-                                <p class="text-gradient small">CEO & Founder</p>
+                    <div class="row g-4 align-items-center">
+                        <div class="col-12 col-sm-6">
+                            <div class="service-card-hover bg-white rounded-4 p-4 text-center shadow-sm border position-relative overflow-hidden" style="border-color: rgba(0,0,0,0.05) !important;">
+                                <div class="position-relative d-inline-block mb-4">
+                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop" class="img-fluid rounded-circle shadow" style="width: 140px; height: 140px; object-fit: cover; border: 4px solid #fff;" alt="Michael Chang">
+                                    <div class="position-absolute bottom-0 end-0 bg-white rounded-circle p-1 shadow-sm">
+                                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px;">
+                                            <i class="fab fa-linkedin-in small"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="fw-bold mb-1">Michael Chang</h4>
+                                <p class="text-gradient fw-bold small mb-3 text-uppercase" style="letter-spacing: 1px;">CEO & Founder</p>
+                                <p class="text-muted small mb-0">Former automotive engineer turned tech entrepreneur with a passion for efficiency.</p>
                             </div>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="glass-panel text-center p-3">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;" alt="CTO">
-                                <h5>Elena Rostova</h5>
-                                <p class="text-gradient small">Chief Technology Officer</p>
+                        <div class="col-12 col-sm-6 mt-sm-5">
+                            <div class="service-card-hover bg-white rounded-4 p-4 text-center shadow-sm border position-relative overflow-hidden" style="border-color: rgba(0,0,0,0.05) !important;">
+                                <div class="position-relative d-inline-block mb-4">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop" class="img-fluid rounded-circle shadow" style="width: 140px; height: 140px; object-fit: cover; border: 4px solid #fff;" alt="Elena Rostova">
+                                    <div class="position-absolute bottom-0 end-0 bg-white rounded-circle p-1 shadow-sm">
+                                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px;">
+                                            <i class="fab fa-linkedin-in small"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="fw-bold mb-1">Elena Rostova</h4>
+                                <p class="text-gradient fw-bold small mb-3 text-uppercase" style="letter-spacing: 1px;">Chief Technology Officer</p>
+                                <p class="text-muted small mb-0">Architect behind our proprietary diagnostic AI and seamless booking engine.</p>
                             </div>
                         </div>
                     </div>
@@ -163,29 +322,43 @@
     </section>
 
     <!-- Section 8: Awards & Certifications -->
-    <section class="awards bg-linear-main">
-        <div class="container text-center">
-            <div class="section-title" data-aos="fade-up">
-                <h5 class="text-gradient">Recognition</h5>
-                <h2>Certifications & Awards</h2>
+    <section class="py-5 position-relative overflow-hidden" style="background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); border-radius: 30px; margin-left: 15px; margin-right: 15px;">
+        <!-- Background decor -->
+        <div class="position-absolute w-100 h-100 top-0 start-0" style="background-image: radial-gradient(circle at 50% 0%, rgba(37,99,235,0.2) 0%, transparent 60%); z-index: 0;"></div>
+
+        <div class="container text-center py-4 position-relative" style="z-index: 1;">
+            <div class="mb-5" data-aos="fade-up">
+                <span class="badge rounded-pill px-3 py-2 shadow-sm mb-3 text-uppercase fw-bold" style="background-color: rgba(255, 255, 255, 0.1); color: #fff; border: 1px solid rgba(255, 255, 255, 0.2); letter-spacing: 1px; backdrop-filter: blur(5px);">RECOGNITION</span>
+                <h2 class="display-5 fw-bold mb-3 text-white" style="font-size: clamp(2rem, 5vw, 3rem); color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;">Certifications & <span style="color: #60a5fa !important; -webkit-text-fill-color: #60a5fa !important;">Awards</span></h2>
+                <p class="mx-auto fs-5" style="max-width: 600px; color: rgba(255,255,255,0.7) !important; -webkit-text-fill-color: rgba(255,255,255,0.7) !important;">Our commitment to excellence is recognized by the industry's most prestigious organizations.</p>
             </div>
-            <div class="row justify-content-center align-items-center g-4" data-aos="fade-up">
-                <div class="col-md-2 col-4">
-                    <div class="glass-panel p-3">
-                        <i class="fas fa-award fa-3x text-muted"></i>
-                        <p class="mt-2 mb-0 small">ASE Certified</p>
+
+            <div class="row justify-content-center g-4">
+                <div class="col-12 col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="bg-white bg-opacity-10 h-100 p-4 p-lg-5 rounded-4 border text-center position-relative overflow-hidden shadow-lg" style="border-color: rgba(255,255,255,0.1) !important; backdrop-filter: blur(10px); transition: transform 0.3s ease; cursor: default;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4 shadow-lg" style="width: 80px; height: 80px;">
+                            <i class="fas fa-award fa-2x text-gradient"></i>
+                        </div>
+                        <h4 class="fw-bold mb-2" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;">ASE Certified</h4>
+                        <p class="mb-0 small" style="color: rgba(255,255,255,0.7) !important; -webkit-text-fill-color: rgba(255,255,255,0.7) !important; line-height: 1.6;">National Institute for Automotive Service Excellence</p>
                     </div>
                 </div>
-                <div class="col-md-2 col-4">
-                    <div class="glass-panel p-3">
-                        <i class="fas fa-certificate fa-3x text-muted"></i>
-                        <p class="mt-2 mb-0 small">Tech Innovator 2024</p>
+                <div class="col-12 col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="bg-white bg-opacity-10 h-100 p-4 p-lg-5 rounded-4 border text-center position-relative overflow-hidden shadow-lg" style="border-color: rgba(255,255,255,0.1) !important; backdrop-filter: blur(10px); transition: transform 0.3s ease; cursor: default;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4 shadow-lg" style="width: 80px; height: 80px;">
+                            <i class="fas fa-certificate fa-2x text-gradient"></i>
+                        </div>
+                        <h4 class="fw-bold mb-2" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;">Tech Innovator</h4>
+                        <p class="mb-0 small" style="color: rgba(255,255,255,0.7) !important; -webkit-text-fill-color: rgba(255,255,255,0.7) !important; line-height: 1.6;">Awarded by AutoTech Summit 2024 for platform excellence</p>
                     </div>
                 </div>
-                <div class="col-md-2 col-4">
-                    <div class="glass-panel p-3">
-                        <i class="fas fa-trophy fa-3x text-muted"></i>
-                        <p class="mt-2 mb-0 small">Best Auto Shop</p>
+                <div class="col-12 col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="bg-white bg-opacity-10 h-100 p-4 p-lg-5 rounded-4 border text-center position-relative overflow-hidden shadow-lg" style="border-color: rgba(255,255,255,0.1) !important; backdrop-filter: blur(10px); transition: transform 0.3s ease; cursor: default;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4 shadow-lg" style="width: 80px; height: 80px;">
+                            <i class="fas fa-trophy fa-2x text-gradient"></i>
+                        </div>
+                        <h4 class="fw-bold mb-2" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;">Best Auto Shop</h4>
+                        <p class="mb-0 small" style="color: rgba(255,255,255,0.7) !important; -webkit-text-fill-color: rgba(255,255,255,0.7) !important; line-height: 1.6;">Voted #1 Regional Service Center for 3 consecutive years</p>
                     </div>
                 </div>
             </div>
@@ -193,45 +366,89 @@
     </section>
 
     <!-- Section 9: Gallery Snippet -->
-    <section class="gallery-snippet">
-        <div class="container">
-            <div class="section-title text-center" data-aos="fade-up">
-                <h5 class="text-gradient">Inside Our Facility</h5>
-                <h2>State-of-the-Art Garage</h2>
+    <section class="py-5">
+        <div class="container py-4">
+            <div class="section-title text-center mb-5" data-aos="fade-up">
+                <span class="badge rounded-pill px-3 py-2 shadow-sm mb-3 text-uppercase fw-bold" style="background-color: rgba(37, 99, 235, 0.1); color: var(--primary-color); border: 1px solid rgba(37, 99, 235, 0.2); letter-spacing: 1px;">THE PLATFORM</span>
+                <h2 class="display-5 fw-bold mb-3" style="font-size: clamp(2rem, 5vw, 3rem);">Seamless Digital <span class="text-gradient">Experience</span></h2>
+                <p class="text-muted mx-auto fs-5" style="max-width: 650px;">From booking your service on your phone to real-time digital diagnostics from our expert mechanics.</p>
             </div>
-            <div class="row g-3" data-aos="zoom-in">
-                <div class="col-md-4">
-                    <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?q=80&w=600&auto=format&fit=crop" class="img-fluid rounded w-100" style="height: 250px; object-fit: cover;" alt="Garage Area 1">
+            
+            <div class="row g-4">
+                <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="overflow-hidden rounded-4 shadow-sm position-relative" style="border: 6px solid #fff; cursor: pointer;">
+                        <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=600&auto=format&fit=crop" class="img-fluid w-100" style="height: 350px; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" alt="Instant Booking App">
+                        <div class="position-absolute bottom-0 start-0 w-100 p-3" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); pointer-events: none;">
+                            <h5 class="text-white fw-bold mb-0">1. Instant Booking</h5>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <img src="https://images.unsplash.com/photo-1503375535948-26f536762394?q=80&w=600&auto=format&fit=crop" class="img-fluid rounded w-100" style="height: 250px; object-fit: cover;" alt="Garage Area 2">
+                <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="overflow-hidden rounded-4 shadow-sm position-relative" style="border: 6px solid #fff; cursor: pointer;">
+                        <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=600&auto=format&fit=crop" class="img-fluid w-100" style="height: 350px; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" alt="Digital Diagnostics">
+                        <div class="position-absolute bottom-0 start-0 w-100 p-3" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); pointer-events: none;">
+                            <h5 class="text-white fw-bold mb-0">2. Digital Diagnostics</h5>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=600&auto=format&fit=crop" class="img-fluid rounded w-100" style="height: 250px; object-fit: cover;" alt="Garage Area 3">
+                <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="overflow-hidden rounded-4 shadow-sm position-relative" style="border: 6px solid #fff; cursor: pointer;">
+                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=600&auto=format&fit=crop" class="img-fluid w-100" style="height: 350px; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" alt="Premium Service">
+                        <div class="position-absolute bottom-0 start-0 w-100 p-3" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); pointer-events: none;">
+                            <h5 class="text-white fw-bold mb-0">3. Premium Care</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Section 10: Call to Action -->
-    <section class="cta text-center py-5">
-        <div class="container" data-aos="fade-up">
-            <h2 class="mb-4">Ready to Experience the Stackly Difference?</h2>
-            <a href="booking.html" class="btn btn-custom btn-lg me-2 mb-2">Book Your Appointment</a>
-            <a href="contact.html" class="btn btn-outline-custom btn-lg mb-2">Contact Us</a>
+    <section class="py-5">
+        <div class="container" data-aos="zoom-in">
+            <div class="position-relative overflow-hidden rounded-4 shadow-lg p-4 p-md-5 text-center" style="background: linear-gradient(135deg, var(--primary-color) 0%, #1e3a8a 100%);">
+                <!-- Decorative background elements -->
+                <div class="position-absolute top-0 start-0 w-100 h-100" style="background-image: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.15) 0%, transparent 40%), radial-gradient(circle at 20% 80%, rgba(255,255,255,0.15) 0%, transparent 40%); z-index: 0;"></div>
+                
+                <div class="position-relative" style="z-index: 1;">
+                    <span class="badge rounded-pill px-3 py-2 shadow-sm mb-4 text-uppercase fw-bold" style="background-color: rgba(255, 255, 255, 0.15); color: #fff; border: 1px solid rgba(255, 255, 255, 0.2); letter-spacing: 1px; backdrop-filter: blur(5px);">GET STARTED TODAY</span>
+                    
+                    <h2 class="display-5 fw-bold mb-4 text-white" style="font-size: clamp(1.8rem, 5vw, 3.5rem); color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; line-height: 1.2;">Ready to Experience the <span style="color: #93c5fd !important; -webkit-text-fill-color: #93c5fd !important;">Ultimate</span> Platform?</h2>
+                    
+                    <p class="mb-5 mx-auto fs-5" style="max-width: 650px; color: rgba(255,255,255,0.85) !important; -webkit-text-fill-color: rgba(255,255,255,0.85) !important; line-height: 1.7;">Join thousands of smart drivers who have modernized their car maintenance. Book your first digital service in less than 60 seconds.</p>
+                    
+                    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                        <a href="booking.html" class="btn btn-light btn-lg rounded-pill px-5 py-3 fw-bold shadow-sm" style="color: var(--primary-color) !important; -webkit-text-fill-color: var(--primary-color) !important; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">Book Your Appointment <i class="fas fa-calendar-check ms-2"></i></a>
+                        
+                        <a href="contact.html" class="btn btn-outline-light btn-lg rounded-pill px-5 py-3 fw-bold" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">Contact Support</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Section 11: Newsletter -->
-    <section class="newsletter bg-linear-main py-5">
-        <div class="container text-center" data-aos="zoom-in">
-            <div class="glass-panel p-5 mx-auto" style="max-width: 700px;">
-                <h3 class="mb-3">Subscribe for Offers</h3>
-                <p class="text-muted mb-4">Get the latest news and special discounts directly to your inbox.</p>
-                <form class="d-flex">
-                    <input type="email" class="form-control me-2" placeholder="Enter your email" required>
-                    <button type="submit" class="btn btn-custom">Subscribe</button>
-                </form>
+    <section class="py-5 border-top" style="background-color: var(--bg-light);">
+        <div class="container">
+            <div class="row align-items-center justify-content-center g-4">
+                <div class="col-lg-5 text-center text-lg-start" data-aos="fade-right">
+                    <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-3 shadow-sm border" style="width: 70px; height: 70px;">
+                        <i class="fas fa-envelope-open-text fa-2x text-gradient"></i>
+                    </div>
+                    <h2 class="display-6 fw-bold mb-2">Subscribe for <span class="text-gradient">Offers</span></h2>
+                    <p class="text-muted mb-0 fs-5">Get the latest news, maintenance tips, and special discounts directly to your inbox.</p>
+                </div>
+                <div class="col-lg-6 offset-lg-1" data-aos="fade-left">
+                    <div class="bg-white p-2 rounded-4 shadow-sm" style="border: 1px solid rgba(0,0,0,0.08);">
+                        <form class="d-flex flex-column flex-sm-row gap-2 gap-sm-0">
+                            <input type="email" class="form-control border-0 px-4 py-3 bg-transparent flex-grow-1" placeholder="Enter your email address..." required style="box-shadow: none !important; font-size: 1.05rem;">
+                            <button type="submit" class="btn btn-custom rounded-3 px-5 py-3 fw-bold flex-shrink-0 shadow-sm" style="transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">Subscribe <i class="fas fa-paper-plane ms-2"></i></button>
+                        </form>
+                    </div>
+                    <div class="mt-3 text-center text-lg-start ps-lg-3">
+                        <small class="text-muted fw-bold"><i class="fas fa-lock text-success me-1"></i> We respect your privacy. No spam.</small>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -249,3 +466,25 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

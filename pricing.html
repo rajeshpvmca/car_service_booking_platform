@@ -23,60 +23,71 @@
     <div id="header-placeholder"></div>
 
     <!-- Section 2: Hero Section -->
-    <section class="page-hero">
-        <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=2000&auto=format&fit=crop');"></div>
-        <div class="hero-overlay"></div>
-        <div class="container hero-content text-center text-white" data-aos="zoom-in" data-aos-duration="1500">
-            <h1 class="hero-title text-white" style="color: #fff !important;">Transparent <span class="text-gradient">Pricing</span></h1>
-            <p class="hero-subtitle text-white" style="color: #fff !important; opacity: 0.9;">No hidden fees, no surprises. Choose the right plan for your vehicle.</p>
+    <section class="pt-5 mt-5 page-hero d-flex align-items-center position-relative" style="min-height: 80vh;">
+        <div class="page-hero-bg position-absolute w-100 h-100" style="top: 0; left: 0; background-image: url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=2000&auto=format&fit=crop'); background-size: cover; background-position: center;"></div>
+        <div class="hero-overlay position-absolute w-100 h-100" style="top: 0; left: 0; background: linear-gradient(to bottom, rgba(10, 15, 25, 0.8) 0%, rgba(10, 15, 25, 0.4) 100%);"></div>
+        <div class="container hero-content text-center position-relative" style="z-index: 2;">
+            <span class="badge rounded-pill px-3 py-2 shadow-sm mb-3" style="background-color: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); letter-spacing: 1px; color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; text-shadow: 0 2px 4px rgba(0,0,0,0.8);" data-aos="fade-down" data-aos-duration="1000">CLEAR PRICING</span>
+            <h1 class="hero-title fw-bold mb-3 mx-auto text-white" style="text-shadow: 0 4px 20px rgba(0,0,0,0.8); font-size: clamp(2.2rem, 8vw, 4.5rem); line-height: 1.2; max-width: 800px;" data-aos="fade-up" data-aos-duration="1000">
+                <span style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;">Transparent</span> <span class="text-gradient" style="-webkit-text-fill-color: transparent !important;">Pricing</span>
+            </h1>
+            <p class="hero-subtitle text-white mx-auto mb-5" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8); -webkit-text-fill-color: #ffffff !important; opacity: 1 !important; font-size: clamp(1rem, 4vw, 1.25rem); max-width: 700px; line-height: 1.6;" data-aos="fade-up" data-aos-duration="1200">
+                No hidden fees, no surprises. Choose the right plan for your vehicle.
+            </p>
         </div>
     </section>
 
     <!-- Section 3: Plans Grid -->
-    <section class="pricing-plans py-5">
+    <section class="pricing-plans py-5 bg-light position-relative">
         <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;" data-aos="fade-up">
+                <span class="badge rounded-pill px-3 py-2 shadow-sm mb-3 text-uppercase fw-bold" style="background-color: rgba(37, 99, 235, 0.1); color: var(--primary-color); border: 1px solid rgba(37, 99, 235, 0.2); letter-spacing: 1px;">SERVICE PLANS</span>
+                <h2 class="display-5 fw-bold mb-3" style="font-size: clamp(2rem, 5vw, 3rem);">Choose Your <span class="text-gradient">Package</span></h2>
+                <p class="text-muted">Select from our range of meticulously crafted service packages designed for every need.</p>
+            </div>
+            
             <div class="row g-4 justify-content-center">
                 <!-- Plan 1 -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="glass-panel text-center p-5">
-                        <h4 class="mb-3">Standard</h4>
-                        <h2 class="text-gradient mb-4">$99<span class="fs-6 text-muted">/visit</span></h2>
-                        <ul class="list-unstyled text-start text-muted mb-4">
-                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Oil & Filter Change</li>
-                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> 50-Point Inspection</li>
-                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Tire Rotation</li>
-                            <li class="mb-2 text-decoration-line-through opacity-50"><i class="fas fa-times me-2"></i> Computer Diagnostics</li>
+                    <div class="service-card-hover bg-white h-100 p-5 rounded-4 shadow-lg border text-center" style="border-color: rgba(0,0,0,0.05) !important; border-radius: 24px !important;">
+                        <h4 class="fw-bold mb-3 text-uppercase" style="letter-spacing: 1px; color: var(--text-main);">Standard</h4>
+                        <h2 class="display-4 fw-bold text-gradient mb-4">$99<span class="fs-6 text-muted fw-normal" style="-webkit-text-fill-color: initial;">/visit</span></h2>
+                        <ul class="list-unstyled text-start text-muted mb-4 fs-5" style="line-height: 2;">
+                            <li><i class="fas fa-check-circle text-gradient me-2"></i> Oil & Filter Change</li>
+                            <li><i class="fas fa-check-circle text-gradient me-2"></i> 50-Point Inspection</li>
+                            <li><i class="fas fa-check-circle text-gradient me-2"></i> Tire Rotation</li>
+                            <li class="opacity-50"><i class="fas fa-times-circle text-muted me-2"></i> <span class="text-decoration-line-through">Computer Diagnostics</span></li>
                         </ul>
-                        <a href="booking.html" class="btn btn-outline-custom w-100">Choose Plan</a>
+                        <a href="booking.html" class="btn btn-outline-custom rounded-pill px-4 py-3 fw-bold w-100 shadow-sm mt-auto">Choose Plan</a>
                     </div>
                 </div>
                 <!-- Plan 2 -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="glass-panel text-center p-5 position-relative" style="border-color: var(--primary-color);">
-                        <span class="badge bg-linear-accent position-absolute top-0 start-50 translate-middle px-3 py-2 rounded-pill">Most Popular</span>
-                        <h4 class="mb-3 mt-2">Premium</h4>
-                        <h2 class="text-gradient mb-4">$199<span class="fs-6 text-muted">/visit</span></h2>
-                        <ul class="list-unstyled text-start text-muted mb-4">
-                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Synthetic Oil Change</li>
-                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> 100-Point Inspection</li>
-                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Computer Diagnostics</li>
-                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Fluid Top-up</li>
+                    <div class="service-card-hover bg-white h-100 p-5 rounded-4 shadow-lg border text-center position-relative overflow-hidden" style="border-color: var(--primary-color) !important; border-radius: 24px !important; border-width: 2px !important; transform: scale(1.05); z-index: 1;">
+                        <span class="badge rounded-pill px-3 py-2 shadow-sm position-absolute top-0 start-50 translate-middle-x mt-3 text-uppercase fw-bold" style="background: linear-gradient(135deg, var(--primary-color) 0%, #1e3a8a 100%); color: #fff; letter-spacing: 1px;">Most Popular</span>
+                        <h4 class="fw-bold mb-3 mt-4 text-uppercase" style="letter-spacing: 1px; color: var(--text-main);">Premium</h4>
+                        <h2 class="display-4 fw-bold text-gradient mb-4">$199<span class="fs-6 text-muted fw-normal" style="-webkit-text-fill-color: initial;">/visit</span></h2>
+                        <ul class="list-unstyled text-start text-muted mb-4 fs-5" style="line-height: 2;">
+                            <li><i class="fas fa-check-circle text-gradient me-2"></i> Synthetic Oil Change</li>
+                            <li><i class="fas fa-check-circle text-gradient me-2"></i> 100-Point Inspection</li>
+                            <li><i class="fas fa-check-circle text-gradient me-2"></i> Computer Diagnostics</li>
+                            <li><i class="fas fa-check-circle text-gradient me-2"></i> Fluid Top-up</li>
                         </ul>
-                        <a href="booking.html" class="btn btn-custom w-100">Choose Plan</a>
+                        <a href="booking.html" class="btn btn-custom rounded-pill px-4 py-3 fw-bold w-100 shadow-lg mt-auto">Choose Plan</a>
                     </div>
                 </div>
                 <!-- Plan 3 -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="glass-panel text-center p-5">
-                        <h4 class="mb-3">Ultimate</h4>
-                        <h2 class="text-gradient mb-4">$399<span class="fs-6 text-muted">/visit</span></h2>
-                        <ul class="list-unstyled text-start text-muted mb-4">
-                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Everything in Premium</li>
-                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Full System Flush</li>
-                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Brake Pad Check & Clean</li>
-                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Spark Plug Inspection</li>
+                    <div class="service-card-hover bg-white h-100 p-5 rounded-4 shadow-lg border text-center" style="border-color: rgba(0,0,0,0.05) !important; border-radius: 24px !important;">
+                        <h4 class="fw-bold mb-3 text-uppercase" style="letter-spacing: 1px; color: var(--text-main);">Ultimate</h4>
+                        <h2 class="display-4 fw-bold text-gradient mb-4">$399<span class="fs-6 text-muted fw-normal" style="-webkit-text-fill-color: initial;">/visit</span></h2>
+                        <ul class="list-unstyled text-start text-muted mb-4 fs-5" style="line-height: 2;">
+                            <li><i class="fas fa-check-circle text-gradient me-2"></i> Everything in Premium</li>
+                            <li><i class="fas fa-check-circle text-gradient me-2"></i> Full System Flush</li>
+                            <li><i class="fas fa-check-circle text-gradient me-2"></i> Brake Pad Check & Clean</li>
+                            <li><i class="fas fa-check-circle text-gradient me-2"></i> Spark Plug Inspection</li>
                         </ul>
-                        <a href="booking.html" class="btn btn-outline-custom w-100">Choose Plan</a>
+                        <a href="booking.html" class="btn btn-outline-custom rounded-pill px-4 py-3 fw-bold w-100 shadow-sm mt-auto">Choose Plan</a>
                     </div>
                 </div>
             </div>
@@ -84,43 +95,47 @@
     </section>
 
     <!-- Section 4: Comparison Table -->
-    <section class="comparison-table py-5 bg-linear-accent">
+    <section class="comparison-table py-5">
         <div class="container" data-aos="fade-up">
-            <h3 class="mb-5 text-center">Feature Comparison</h3>
-            <div class="glass-panel p-4 overflow-auto">
-                <table class="table table-dark table-striped table-hover text-white mb-0" style="background: transparent;">
-                    <thead>
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                <span class="badge rounded-pill px-3 py-2 shadow-sm mb-3 text-uppercase fw-bold" style="background-color: rgba(37, 99, 235, 0.1); color: var(--primary-color); border: 1px solid rgba(37, 99, 235, 0.2); letter-spacing: 1px;">COMPARE</span>
+                <h2 class="display-5 fw-bold mb-3" style="font-size: clamp(2rem, 5vw, 3rem);">Feature <span class="text-gradient">Comparison</span></h2>
+            </div>
+            
+            <div class="bg-white rounded-4 shadow-lg border p-4 p-md-5 overflow-auto" style="border-color: rgba(0,0,0,0.05) !important; border-radius: 24px !important;">
+                <table class="table table-hover align-middle mb-0" style="min-width: 800px;">
+                    <thead class="border-bottom border-2">
                         <tr>
-                            <th scope="col" class="bg-transparent border-secondary">Features</th>
-                            <th scope="col" class="text-center bg-transparent border-secondary">Standard</th>
-                            <th scope="col" class="text-center bg-transparent border-secondary">Premium</th>
-                            <th scope="col" class="text-center bg-transparent border-secondary">Ultimate</th>
+                            <th scope="col" class="py-4 fs-5 text-dark w-25">Features</th>
+                            <th scope="col" class="py-4 text-center fs-5 text-dark">Standard</th>
+                            <th scope="col" class="py-4 text-center fs-5 text-dark position-relative"><span class="badge rounded-pill bg-primary position-absolute top-0 start-50 translate-middle-x" style="font-size: 0.65rem;">POPULAR</span>Premium</th>
+                            <th scope="col" class="py-4 text-center fs-5 text-dark">Ultimate</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="border-top-0">
                         <tr>
-                            <td class="bg-transparent border-secondary">Oil Change</td>
-                            <td class="text-center bg-transparent border-secondary"><i class="fas fa-check text-primary"></i></td>
-                            <td class="text-center bg-transparent border-secondary"><i class="fas fa-check text-primary"></i></td>
-                            <td class="text-center bg-transparent border-secondary"><i class="fas fa-check text-primary"></i></td>
+                            <td class="py-4 fw-bold text-muted">Oil Change</td>
+                            <td class="py-4 text-center"><i class="fas fa-check-circle text-gradient fs-4"></i></td>
+                            <td class="py-4 text-center bg-light rounded"><i class="fas fa-check-circle text-gradient fs-4"></i></td>
+                            <td class="py-4 text-center"><i class="fas fa-check-circle text-gradient fs-4"></i></td>
                         </tr>
                         <tr>
-                            <td class="bg-transparent border-secondary">Points Inspection</td>
-                            <td class="text-center bg-transparent border-secondary">50-Point</td>
-                            <td class="text-center bg-transparent border-secondary">100-Point</td>
-                            <td class="text-center bg-transparent border-secondary">Comprehensive</td>
+                            <td class="py-4 fw-bold text-muted">Points Inspection</td>
+                            <td class="py-4 text-center text-muted fw-bold">50-Point</td>
+                            <td class="py-4 text-center bg-light rounded fw-bold text-dark">100-Point</td>
+                            <td class="py-4 text-center text-muted fw-bold">Comprehensive</td>
                         </tr>
                         <tr>
-                            <td class="bg-transparent border-secondary">Computer Diagnostics</td>
-                            <td class="text-center bg-transparent border-secondary"><i class="fas fa-times text-muted"></i></td>
-                            <td class="text-center bg-transparent border-secondary"><i class="fas fa-check text-primary"></i></td>
-                            <td class="text-center bg-transparent border-secondary"><i class="fas fa-check text-primary"></i></td>
+                            <td class="py-4 fw-bold text-muted">Computer Diagnostics</td>
+                            <td class="py-4 text-center"><i class="fas fa-minus text-muted opacity-25 fs-5"></i></td>
+                            <td class="py-4 text-center bg-light rounded"><i class="fas fa-check-circle text-gradient fs-4"></i></td>
+                            <td class="py-4 text-center"><i class="fas fa-check-circle text-gradient fs-4"></i></td>
                         </tr>
                         <tr>
-                            <td class="bg-transparent border-secondary">Full System Flush</td>
-                            <td class="text-center bg-transparent border-secondary"><i class="fas fa-times text-muted"></i></td>
-                            <td class="text-center bg-transparent border-secondary"><i class="fas fa-times text-muted"></i></td>
-                            <td class="text-center bg-transparent border-secondary"><i class="fas fa-check text-primary"></i></td>
+                            <td class="py-4 fw-bold text-muted border-bottom-0">Full System Flush</td>
+                            <td class="py-4 text-center border-bottom-0"><i class="fas fa-minus text-muted opacity-25 fs-5"></i></td>
+                            <td class="py-4 text-center bg-light rounded border-bottom-0"><i class="fas fa-minus text-muted opacity-25 fs-5"></i></td>
+                            <td class="py-4 text-center border-bottom-0"><i class="fas fa-check-circle text-gradient fs-4"></i></td>
                         </tr>
                     </tbody>
                 </table>
@@ -129,36 +144,48 @@
     </section>
 
     <!-- Section 5: Add-ons -->
-    <section class="addons py-5">
+    <section class="addons py-5 bg-light position-relative">
         <div class="container" data-aos="fade-up">
-            <h3 class="mb-4 text-center">Available Add-ons</h3>
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                <span class="badge rounded-pill px-3 py-2 shadow-sm mb-3 text-uppercase fw-bold" style="background-color: rgba(37, 99, 235, 0.1); color: var(--primary-color); border: 1px solid rgba(37, 99, 235, 0.2); letter-spacing: 1px;">EXTRAS</span>
+                <h2 class="display-5 fw-bold mb-3" style="font-size: clamp(2rem, 5vw, 3rem);">Available <span class="text-gradient">Add-ons</span></h2>
+            </div>
+            
             <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="glass-panel text-center p-4">
-                        <i class="fas fa-snowflake fa-2x text-primary mb-3"></i>
-                        <h5>A/C Recharge</h5>
-                        <p class="text-gradient fs-4 mb-0">+$49</p>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card-hover bg-white h-100 p-4 rounded-4 shadow-sm border text-center" style="border-color: rgba(0,0,0,0.05) !important;">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-light rounded-circle mb-4" style="width: 70px; height: 70px;">
+                            <i class="fas fa-snowflake fa-2x text-gradient"></i>
+                        </div>
+                        <h4 class="fw-bold mb-2">A/C Recharge</h4>
+                        <p class="text-gradient display-6 fw-bold mb-0">+$49</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="glass-panel text-center p-4">
-                        <i class="fas fa-broom fa-2x text-primary mb-3"></i>
-                        <h5>Detailing</h5>
-                        <p class="text-gradient fs-4 mb-0">+$89</p>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card-hover bg-white h-100 p-4 rounded-4 shadow-sm border text-center" style="border-color: rgba(0,0,0,0.05) !important;">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-light rounded-circle mb-4" style="width: 70px; height: 70px;">
+                            <i class="fas fa-broom fa-2x text-gradient"></i>
+                        </div>
+                        <h4 class="fw-bold mb-2">Detailing</h4>
+                        <p class="text-gradient display-6 fw-bold mb-0">+$89</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="glass-panel text-center p-4">
-                        <i class="fas fa-tools fa-2x text-primary mb-3"></i>
-                        <h5>Tire Alignment</h5>
-                        <p class="text-gradient fs-4 mb-0">+$69</p>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card-hover bg-white h-100 p-4 rounded-4 shadow-sm border text-center" style="border-color: rgba(0,0,0,0.05) !important;">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-light rounded-circle mb-4" style="width: 70px; height: 70px;">
+                            <i class="fas fa-tools fa-2x text-gradient"></i>
+                        </div>
+                        <h4 class="fw-bold mb-2">Tire Alignment</h4>
+                        <p class="text-gradient display-6 fw-bold mb-0">+$69</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="glass-panel text-center p-4">
-                        <i class="fas fa-car-battery fa-2x text-primary mb-3"></i>
-                        <h5>Battery Replacement</h5>
-                        <p class="text-gradient fs-4 mb-0">+$120</p>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card-hover bg-white h-100 p-4 rounded-4 shadow-sm border text-center" style="border-color: rgba(0,0,0,0.05) !important;">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-light rounded-circle mb-4" style="width: 70px; height: 70px;">
+                            <i class="fas fa-car-battery fa-2x text-gradient"></i>
+                        </div>
+                        <h4 class="fw-bold mb-2">Battery Swap</h4>
+                        <p class="text-gradient display-6 fw-bold mb-0">+$120</p>
                     </div>
                 </div>
             </div>
@@ -166,19 +193,21 @@
     </section>
 
     <!-- Section 6: Membership Info -->
-    <section class="membership py-5 bg-linear-main">
+    <section class="membership py-5">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-                    <h5 class="text-gradient">Join the Club</h5>
-                    <h2 class="mb-4">Stackly Elite Membership</h2>
-                    <p class="text-muted mb-4">Subscribe to our yearly plan and get unlimited diagnostics, 20% off all parts, and priority booking.</p>
-                    <a href="contact.html" class="btn btn-custom">Become a Member</a>
+            <div class="row align-items-center bg-white rounded-4 shadow-lg border p-4 p-lg-5 overflow-hidden position-relative" style="border-color: rgba(0,0,0,0.05) !important; border-radius: 24px !important;">
+                <div class="position-absolute d-none d-md-block" style="top: -30px; right: -30px; width: 250px; height: 250px; background: radial-gradient(var(--primary-color) 2px, transparent 2px); background-size: 20px 20px; z-index: 0; opacity: 0.1; border-radius: 50%;"></div>
+                
+                <div class="col-lg-7 mb-4 mb-lg-0 position-relative" style="z-index: 1;" data-aos="fade-right">
+                    <span class="badge rounded-pill px-3 py-2 shadow-sm mb-3 text-uppercase fw-bold" style="background-color: rgba(37, 99, 235, 0.1); color: var(--primary-color); border: 1px solid rgba(37, 99, 235, 0.2); letter-spacing: 1px;">JOIN THE CLUB</span>
+                    <h2 class="display-5 fw-bold mb-4" style="font-size: clamp(2rem, 5vw, 3rem);">Stackly <span class="text-gradient">Elite Membership</span></h2>
+                    <p class="text-muted mb-4 fs-5" style="line-height: 1.7; max-width: 600px;">Subscribe to our yearly plan and get unlimited diagnostics, 20% off all parts, and priority booking.</p>
+                    <a href="contact.html" class="btn btn-custom rounded-pill px-5 py-3 fw-bold shadow-lg">Become a Member <i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="glass-panel p-4 text-center">
-                        <h3 class="mb-3">Elite Tier</h3>
-                        <h1 class="text-gradient display-4 fw-bold">$299<span class="fs-6 text-muted">/year</span></h1>
+                <div class="col-lg-5 position-relative" style="z-index: 1;" data-aos="fade-left">
+                    <div class="p-5 text-center rounded-4 position-relative overflow-hidden shadow-lg" style="background: linear-gradient(135deg, var(--primary-color) 0%, #1e3a8a 100%);">
+                        <h4 class="mb-3 text-white" style="color: rgba(255,255,255,0.9) !important; -webkit-text-fill-color: rgba(255,255,255,0.9) !important; letter-spacing: 1px;">ELITE TIER</h4>
+                        <h1 class="display-3 fw-bold mb-0 text-white" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;">$299<span class="fs-5 fw-normal" style="color: rgba(255,255,255,0.7) !important; -webkit-text-fill-color: rgba(255,255,255,0.7) !important;">/year</span></h1>
                     </div>
                 </div>
             </div>
@@ -186,42 +215,48 @@
     </section>
 
     <!-- Section 7: Enterprise/Fleet info -->
-    <section class="fleet-info py-5">
+    <section class="fleet-info py-5 position-relative">
         <div class="container text-center" data-aos="zoom-in">
-            <div class="glass-panel p-5 mx-auto border border-secondary" style="max-width: 800px;">
-                <i class="fas fa-truck fa-3x text-gradient mb-3"></i>
-                <h3 class="mb-3">Enterprise & Fleet Management</h3>
-                <p class="text-muted mb-4">Have more than 5 vehicles? We offer custom volume pricing for corporate fleets, delivery services, and enterprise clients.</p>
-                <a href="contact.html" class="btn btn-outline-custom">Contact Sales</a>
+            <div class="service-card-hover bg-white p-5 mx-auto rounded-4 shadow-sm border" style="max-width: 800px; border-color: rgba(0,0,0,0.05) !important;">
+                <div class="d-inline-flex align-items-center justify-content-center bg-light rounded-circle mb-4" style="width: 80px; height: 80px;">
+                    <i class="fas fa-truck fa-3x text-gradient"></i>
+                </div>
+                <h3 class="display-6 fw-bold mb-3">Enterprise & <span class="text-gradient">Fleet Management</span></h3>
+                <p class="text-muted mb-4 fs-5 mx-auto" style="line-height: 1.7; max-width: 600px;">Have more than 5 vehicles? We offer custom volume pricing for corporate fleets, delivery services, and enterprise clients.</p>
+                <a href="contact.html" class="btn btn-outline-custom rounded-pill px-5 py-3 fw-bold shadow-sm">Contact Sales <i class="fas fa-envelope ms-2"></i></a>
             </div>
         </div>
     </section>
 
     <!-- Section 8: FAQ -->
-    <section class="faq-section py-5 bg-linear-accent">
+    <section class="faq-section py-5 bg-light">
         <div class="container" data-aos="fade-up">
-            <h3 class="mb-5 text-center">Frequently Asked Questions</h3>
-            <div class="accordion" id="pricingFaq" style="--bs-accordion-bg: transparent; --bs-accordion-color: #fff;">
-                <div class="accordion-item glass-panel mb-3 border-0">
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                <span class="badge rounded-pill px-3 py-2 shadow-sm mb-3 text-uppercase fw-bold" style="background-color: rgba(37, 99, 235, 0.1); color: var(--primary-color); border: 1px solid rgba(37, 99, 235, 0.2); letter-spacing: 1px;">SUPPORT</span>
+                <h2 class="display-5 fw-bold mb-3" style="font-size: clamp(2rem, 5vw, 3rem);">Frequently Asked <span class="text-gradient">Questions</span></h2>
+            </div>
+            
+            <div class="accordion mx-auto" id="pricingFaq" style="max-width: 800px; --bs-accordion-bg: #fff; --bs-accordion-color: var(--text-main); --bs-accordion-border-color: rgba(0,0,0,0.05);">
+                <div class="accordion-item rounded-4 mb-3 shadow-sm overflow-hidden" style="border: 1px solid rgba(0,0,0,0.05);">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed bg-transparent text-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        <button class="accordion-button collapsed fw-bold fs-5 px-4 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
                             Are there any hidden fees?
                         </button>
                     </h2>
                     <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
-                        <div class="accordion-body text-muted">
+                        <div class="accordion-body text-muted fs-6 px-4 pb-4 pt-1" style="line-height: 1.7;">
                             No! At Stackly, the price you see is the price you pay. Any extra parts or labor needed will always be quoted and approved by you beforehand.
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item glass-panel mb-3 border-0">
+                <div class="accordion-item rounded-4 mb-3 shadow-sm overflow-hidden" style="border: 1px solid rgba(0,0,0,0.05);">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed bg-transparent text-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        <button class="accordion-button collapsed fw-bold fs-5 px-4 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
                             Can I upgrade my package later?
                         </button>
                     </h2>
                     <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
-                        <div class="accordion-body text-muted">
+                        <div class="accordion-body text-muted fs-6 px-4 pb-4 pt-1" style="line-height: 1.7;">
                             Yes, you can upgrade your service package at the shop before work begins. Our master technicians can also recommend the best plan after an initial check.
                         </div>
                     </div>
@@ -230,11 +265,27 @@
         </div>
     </section>
 
-    <!-- Section 9: CTA -->
-    <section class="cta py-5 text-center">
-        <div class="container" data-aos="fade-up">
-            <h2 class="mb-4">Ready to upgrade your car care experience?</h2>
-            <a href="booking.html" class="btn btn-custom btn-lg">Book Your Service Now</a>
+    <!-- Section 9: CTA (Copied from about.html) -->
+    <section class="py-5">
+        <div class="container" data-aos="zoom-in">
+            <div class="position-relative overflow-hidden rounded-4 shadow-lg p-4 p-md-5 text-center" style="background: linear-gradient(135deg, var(--primary-color) 0%, #1e3a8a 100%);">
+                <!-- Decorative background elements -->
+                <div class="position-absolute top-0 start-0 w-100 h-100" style="background-image: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.15) 0%, transparent 40%), radial-gradient(circle at 20% 80%, rgba(255,255,255,0.15) 0%, transparent 40%); z-index: 0;"></div>
+                
+                <div class="position-relative" style="z-index: 1;">
+                    <span class="badge rounded-pill px-3 py-2 shadow-sm mb-4 text-uppercase fw-bold" style="background-color: rgba(255, 255, 255, 0.15); color: #fff; border: 1px solid rgba(255, 255, 255, 0.2); letter-spacing: 1px; backdrop-filter: blur(5px);">GET STARTED TODAY</span>
+                    
+                    <h2 class="display-5 fw-bold mb-4 text-white" style="font-size: clamp(1.8rem, 5vw, 3.5rem); color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; line-height: 1.2;">Ready to Experience the <span style="color: #93c5fd !important; -webkit-text-fill-color: #93c5fd !important;">Ultimate</span> Platform?</h2>
+                    
+                    <p class="mb-5 mx-auto fs-5" style="max-width: 650px; color: rgba(255,255,255,0.85) !important; -webkit-text-fill-color: rgba(255,255,255,0.85) !important; line-height: 1.7;">Join thousands of smart drivers who have modernized their car maintenance. Book your first digital service in less than 60 seconds.</p>
+                    
+                    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                        <a href="booking.html" class="btn btn-light btn-lg rounded-pill px-5 py-3 fw-bold shadow-sm" style="color: var(--primary-color) !important; -webkit-text-fill-color: var(--primary-color) !important; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">Book Your Appointment <i class="fas fa-calendar-check ms-2"></i></a>
+                        
+                        <a href="contact.html" class="btn btn-outline-light btn-lg rounded-pill px-5 py-3 fw-bold" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">Contact Support</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

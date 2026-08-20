@@ -1,6 +1,6 @@
 // Three.js Animated Background - Automotive Grid (Light Theme)
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("preloaderDone", () => {
     const container = document.getElementById('three-canvas-container');
     if (!container) return; 
 

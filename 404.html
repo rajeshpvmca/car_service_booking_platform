@@ -10,51 +10,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Theme CSS for buttons -->
+    <link href="css/style.css" rel="stylesheet">
     <style>
-        :root {
-            --bg-base: #020617;
-            --primary: #3b82f6;
-            --accent-1: #8b5cf6;
-            --accent-2: #10b981;
-        }
-
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-base);
-            color: #fff;
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            background-color: #f8fafc !important; /* var(--bg-light) */
+            color: #0f172a !important; /* var(--text-main) */
             margin: 0;
             padding: 0;
             overflow: hidden; /* Lock scroll */
         }
 
-        /* Ambient Animated Mesh Background */
+        /* Ambient Animated Mesh Background - Light Theme */
         .ambient-bg {
             position: fixed;
             top: 0; left: 0;
             width: 100vw; height: 100vh;
             z-index: -1;
             overflow: hidden;
-            background: var(--bg-base);
+            background: #f8fafc;
         }
 
         .orb {
             position: absolute;
             border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.6;
+            filter: blur(120px);
+            opacity: 0.4;
             animation: floatOrb 20s infinite alternate ease-in-out;
         }
 
         .orb-1 {
             width: 60vw; height: 60vw;
-            background: var(--primary);
+            background: #2563eb; /* Primary */
             top: -20%; left: -10%;
             animation-duration: 25s;
         }
 
         .orb-2 {
             width: 50vw; height: 50vw;
-            background: var(--accent-1);
+            background: #f43f5e; /* Accent Rose */
             bottom: -10%; right: -10%;
             animation-duration: 20s;
             animation-delay: -5s;
@@ -62,11 +57,11 @@
 
         .orb-3 {
             width: 40vw; height: 40vw;
-            background: var(--accent-2);
+            background: #0ea5e9; /* Secondary Sky */
             top: 40%; left: 40%;
             animation-duration: 30s;
             animation-delay: -10s;
-            opacity: 0.4;
+            opacity: 0.3;
         }
 
         @keyframes floatOrb {
@@ -76,25 +71,25 @@
             100% { transform: translate(5%, -15%) scale(1.05); }
         }
 
-        /* Glass Container */
+        /* Light Glass Container matching style.css */
         .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 32px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 1);
+            border-radius: 24px;
             padding: 4rem 3rem;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
             position: relative;
             z-index: 10;
         }
 
-        /* Hollow Text Effect */
+        /* Hollow Text Effect - Light Theme */
         .hollow-text {
             font-size: 10rem;
             font-weight: 800;
             color: transparent;
-            -webkit-text-stroke: 2px rgba(255, 255, 255, 0.9);
+            -webkit-text-stroke: 3px #2563eb;
             line-height: 1;
             margin-bottom: 0;
             letter-spacing: -5px;
@@ -104,9 +99,9 @@
 
         /* Glitch effect on hover */
         .hollow-text:hover {
-            color: #fff;
+            color: #2563eb;
             -webkit-text-stroke: 0px;
-            text-shadow: 0 0 20px rgba(255,255,255,0.8);
+            text-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
             transition: all 0.3s ease;
         }
 
@@ -115,58 +110,22 @@
             font-weight: 700;
             margin-top: -10px;
             margin-bottom: 1.5rem;
-            background: linear-gradient(to right, #fff, #94a3b8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #0f172a;
         }
 
         .desc-text {
-            color: #94a3b8;
+            color: #64748b; /* var(--text-muted) */
             font-size: 1.1rem;
             max-width: 450px;
             margin: 0 auto 2.5rem auto;
             line-height: 1.6;
         }
 
-        /* Premium Buttons */
-        .btn-premium {
-            background: #fff;
-            color: #000;
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
-        }
-        .btn-premium:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(255, 255, 255, 0.25);
-            background: #f8fafc;
-        }
-
-        .btn-premium-outline {
-            background: rgba(255, 255, 255, 0.05);
-            color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-        .btn-premium-outline:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.4);
-            transform: translateY(-3px);
-        }
-
         /* Floating Element inside card */
         .car-icon {
             font-size: 2.5rem;
             color: #fff;
-            background: linear-gradient(135deg, var(--primary), var(--accent-1));
+            background: linear-gradient(135deg, #2563eb, #f43f5e);
             width: 80px;
             height: 80px;
             display: inline-flex;
@@ -174,14 +133,36 @@
             justify-content: center;
             border-radius: 50%;
             margin-bottom: 1rem;
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.5);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.4);
             animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
-            70% { box-shadow: 0 0 0 20px rgba(59, 130, 246, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.6); }
+            70% { box-shadow: 0 0 0 20px rgba(37, 99, 235, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+        }
+
+        /* Floating Element inside card */
+        .car-icon {
+            font-size: 2.5rem;
+            color: #fff;
+            background: linear-gradient(135deg, #2563eb, #f43f5e);
+            width: 80px;
+            height: 80px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.6); }
+            70% { box-shadow: 0 0 0 20px rgba(37, 99, 235, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
         }
 
         /* Ultra Responsive */
@@ -230,10 +211,10 @@
                 </p>
                 
                 <div class="d-flex justify-content-center gap-3 btn-group-custom">
-                    <a href="index.html" class="btn btn-premium text-decoration-none d-flex align-items-center justify-content-center">
+                    <a href="index.html" class="btn btn-custom-primary text-decoration-none d-flex align-items-center justify-content-center">
                         <i class="fas fa-home me-2"></i> Back to Home
                     </a>
-                    <button onclick="window.history.back()" class="btn btn-premium-outline d-flex align-items-center justify-content-center">
+                    <button onclick="window.history.back()" class="btn btn-custom-outline d-flex align-items-center justify-content-center">
                         <i class="fas fa-arrow-left me-2"></i> Go Back
                     </button>
                 </div>

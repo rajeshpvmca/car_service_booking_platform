@@ -24,9 +24,30 @@ async function loadComponents() {
     }
 }
 
+
 document.addEventListener('DOMContentLoaded', async () => {
     // 0. Load Header and Footer first
     await loadComponents();
+    
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        document.body.style.overflow = 'hidden';
+        window.scrollTo(0, 0); // scroll to top
+        setTimeout(() => {
+            preloader.classList.add('hidden');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+                document.body.style.overflow = '';
+                document.dispatchEvent(new Event('preloaderDone'));
+            }, 500);
+        }, 2000);
+    } else {
+        document.dispatchEvent(new Event('preloaderDone'));
+    }
+});
+
+document.addEventListener('preloaderDone', async () => {
+
 
     // 0.5 Highlight Active Nav Link
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
@@ -113,7 +134,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
 // Number Counter Animation
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('preloaderDone', () => {
     const counters = document.querySelectorAll('.counter-number');
     
     // Formatting function for numbers (e.g. 15000 -> 15k)

@@ -45,9 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Define default pages for each role
     const roleDefaults = {
-        'Customer': 'tenant_properties',
-        'Garage': 'landlord_properties',
-        'Admin': 'admin_analytics'
+        'Customer': 'customer-overview',
+        'Garage': 'garage-overview',
+        'Admin': 'admin-overview'
     };
 
     // Restore last page

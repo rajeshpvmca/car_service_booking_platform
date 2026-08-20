@@ -1,221 +1,95 @@
-/**
- * Stackly Car Service Booking Platform
- * Authentication Logic (Login & Registration)
- */
 
-document.addEventListener("DOMContentLoaded", function () {
-    
-    // --- REGISTRATION LOGIC ---
-    const signupForm = document.getElementById("signupForm");
 
-    if (signupForm) {
-        signupForm.addEventListener("submit", function (e) {
-            e.preventDefault();
+// REGISTER
 
-            // Clear previous errors
-            clearErrors();
+const signupForm = document.getElementById("signupForm");
 
-            const name = document.getElementById("name").value.trim();
-            const phone = document.getElementById("phone").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const password = document.getElementById("password").value;
-            const confirmPass = document.getElementById("confirmPassword").value;
-            
-            // Get selected role
-            const selectedRoleInput = document.querySelector('input[name="role"]:checked');
-            const role = selectedRoleInput ? selectedRoleInput.value : 'Customer';
+if (signupForm) {
+  signupForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-            let hasError = false;
+    const name        = document.getElementById("name").value;
+    const selectedRoleInput = document.querySelector('input[name="role"]:checked');
+    const role        = selectedRoleInput ? selectedRoleInput.value : 'Customer';
+    const email       = document.getElementById("email").value;
+    const password    = document.getElementById("password").value;
+    const confirmPass = document.getElementById("confirmPassword").value;
 
-            // Basic Validation
-            if (password.length < 6) {
-                showError("password", "Password must be at least 6 characters.");
-                hasError = true;
-            }
-            if (password !== confirmPass) {
-                showError("confirmPassword", "Passwords do not match.");
-                hasError = true;
-            }
-
-            if (hasError) return;
-
-            // Store in localStorage (Simulation of Backend)
-            const userData = {
-                name: name,
-                phone: phone,
-                email: email,
-                role: role,
-                password: password, // In a real app, never store plain text passwords!
-                createdAt: new Date().toISOString()
-            };
-
-            localStorage.setItem("stackly_user_" + email, JSON.stringify(userData));
-            
-            // Success Feedback
-            const btn = signupForm.querySelector('button[type="submit"]');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Creating Account...';
-            
-            setTimeout(() => {
-                alert("Account created successfully as " + role + "!");
-                window.location.href = "login.html";
-            }, 1000);
-        });
+    // Password rules
+    if (password.length < 8) {
+      showError("password", "Password must be at least 8 characters."); return;
+    }
+    if (!/[A-Z]/.test(password)) {
+      showError("password", "Password must contain at least one uppercase letter."); return;
+    }
+    if (!/[0-9]/.test(password)) {
+      showError("password", "Password must contain at least one number."); return;
+    }
+    if (!/[^A-Za-z0-9]/.test(password)) {
+      showError("password", "Password must contain at least one symbol (!@#$%…)."); return;
+    }
+    if (password !== confirmPass) {
+      showError("confirmPassword", "Passwords do not match."); return;
     }
 
+    localStorage.setItem(
+      "user_" + email,
+      JSON.stringify({ name, role, email, password })
+    );
+    window.location.href = "login.html";
+  });
+}
 
-    // --- LOGIN LOGIC ---
-    const loginForm = document.getElementById("loginForm");
+function showError(fieldId, msg) {
+  const input = document.getElementById(fieldId);
+  input.classList.add("is-invalid");
+  let fb = input.parentElement.nextElementSibling;
+  // if sibling is the strength bar or match msg, use it; else create
+  if (!fb || !fb.classList || !fb.classList.contains("invalid-feedback")) {
+    fb = document.createElement("div");
+    fb.className = "invalid-feedback d-block";
+    input.parentElement.insertAdjacentElement("afterend", fb);
+  }
+  fb.textContent = msg;
+  input.addEventListener("input", () => {
+    input.classList.remove("is-invalid");
+    if (fb) fb.textContent = "";
+  }, { once: true });
+}
 
-    if (loginForm) {
-        loginForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-            
-            clearErrors();
+// LOGIN
+const loginForm = document.getElementById("loginForm");
 
-            const email = document.getElementById("loginEmail").value.trim();
-            const password = document.getElementById("loginPassword").value;
-            
-            // Get selected role
-            const selectedRoleInput = document.querySelector('input[name="role"]:checked');
-            const role = selectedRoleInput ? selectedRoleInput.value : 'Customer';
+if (loginForm) {
+  loginForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-            // Retrieve user from DB (localStorage)
-            const storedUser = localStorage.getItem("stackly_user_" + email);
-            
-            // Demo Login Fallback (If user doesn't exist, we just simulate login anyway for presentation)
-            let userObj = storedUser ? JSON.parse(storedUser) : {
-                name: email.split("@")[0],
-                email: email,
-                role: role
-            };
+    // Get selected role from radio buttons
+    const selectedRoleInput = document.querySelector('input[name="role"]:checked');
+    const role = selectedRoleInput ? selectedRoleInput.value : '';
+    const email = document.getElementById("loginEmail").value;
+    const password = document.getElementById("loginPassword").value;
 
-            // If user exists, check role and password
-            if (storedUser) {
-                if (userObj.password !== password) {
-                    showError("loginPassword", "Invalid password.");
-                    return;
-                }
-                if (userObj.role !== role) {
-                    showError("loginEmail", "No " + role + " account found with this email. Did you select the wrong role?");
-                    return;
-                }
-            }
+    // Demo Login: Create session even if not registered
+    const user = { name: email.split("@")[0], role: role, email: email };
+    localStorage.setItem("loggedInUser", JSON.stringify(user));
 
-            // Set active session
-            localStorage.setItem("stackly_active_session", JSON.stringify(userObj));
+    window.location.href = "dashboard.html";
+  });
+}
 
-            // UI Feedback
-            const btn = loginForm.querySelector('button[type="submit"]');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Authenticating...';
-
-            // Route to unified dynamic dashboard
-            setTimeout(() => {
-                window.location.href = "dashboard.html";
-            }, 800);
-        });
-    }
-
-    // --- HELPER FUNCTIONS ---
-    function showError(fieldId, msg) {
-        const input = document.getElementById(fieldId);
-        if (!input) return;
+// Universal Password Visibility Toggle
+document.querySelectorAll('.toggle-password').forEach(toggle => {
+    toggle.addEventListener('click', function () {
+        const input = this.parentElement.querySelector('input');
+        if (input) {
+            const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+            input.setAttribute('type', type);
         
-        // Find the input-glass wrapper to add red border
-        const wrapper = input.closest('.input-glass');
-        if (wrapper) wrapper.style.borderColor = 'red';
-        
-        let fb = input.parentElement.nextElementSibling;
-        if (!fb || !fb.classList.contains("invalid-feedback")) {
-            fb = document.createElement("div");
-            fb.className = "invalid-feedback d-block text-danger small mt-1 px-2";
-            input.parentElement.insertAdjacentElement("afterend", fb);
+            // Toggle the eye icon
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-eye');
+            icon.classList.toggle('fa-eye-slash');
         }
-        fb.textContent = msg;
-        
-        input.addEventListener("input", function clearInputError() {
-            if (wrapper) wrapper.style.borderColor = '';
-            if (fb) fb.remove();
-            input.removeEventListener("input", clearInputError);
-        });
-    }
-
-    function clearErrors() {
-        document.querySelectorAll('.invalid-feedback').forEach(el => el.remove());
-        document.querySelectorAll('.input-glass').forEach(el => el.style.borderColor = '');
-    }
-
-        // --- PASSWORD STRENGTH LOGIC ---
-    function setupPasswordStrength(inputId, barId, textId) {
-        const passInput = document.getElementById(inputId);
-        const strengthBar = document.getElementById(barId);
-        const strengthText = document.getElementById(textId);
-
-        if (!passInput || !strengthBar || !strengthText) return;
-
-        passInput.addEventListener('input', function() {
-            const val = passInput.value;
-            let score = 0;
-            
-            if (val.length > 0) score += 1;
-            if (val.length >= 6) score += 1;
-            if (val.length >= 8) score += 1;
-            if (/[A-Z]/.test(val)) score += 1;
-            if (/[0-9]/.test(val)) score += 1;
-            if (/[^A-Za-z0-9]/.test(val)) score += 1;
-
-            let width = '0%';
-            let colorClass = 'bg-danger';
-            let text = 'Too short';
-
-            if (val.length === 0) {
-                width = '0%';
-                text = 'Enter password';
-            } else if (score <= 2) {
-                width = '25%';
-                colorClass = 'bg-danger';
-                text = 'Weak';
-            } else if (score <= 4) {
-                width = '50%';
-                colorClass = 'bg-warning';
-                text = 'Fair';
-            } else if (score === 5) {
-                width = '75%';
-                colorClass = 'bg-info';
-                text = 'Good';
-            } else {
-                width = '100%';
-                colorClass = 'bg-success';
-                text = 'Strong';
-            }
-
-            strengthBar.style.width = width;
-            strengthBar.className = 'progress-bar ' + colorClass;
-            strengthText.textContent = text;
-        });
-    }
-
-    // Initialize strength bars
-    setupPasswordStrength('password', 'strengthBar', 'strengthText');
-    setupPasswordStrength('loginPassword', 'loginStrengthBar', 'loginStrengthText');
-
-    // --- PASSWORD VISIBILITY TOGGLE ---
-    document.querySelectorAll('.toggle-password').forEach(toggle => {
-        toggle.addEventListener('click', function () {
-            const input = this.parentElement.querySelector('input');
-            if (input) {
-                const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
-                input.setAttribute('type', type);
-                
-                const icon = this.querySelector('i');
-                if (icon) {
-                    icon.classList.toggle('fa-eye');
-                    icon.classList.toggle('fa-eye-slash');
-                }
-            }
-        });
     });
 });
-
-

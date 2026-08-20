@@ -128,15 +128,15 @@
                         </div>
                         <!-- Password Strength Bar (Requested) -->
                         <div class="progress mb-1" style="height: 5px; background-color: rgba(0,0,0,0.05); border-radius: 3px;">
-                            <div id="loginStrengthBar" class="progress-bar bg-danger" role="progressbar" style="width: 0%; transition: all 0.3s ease;"></div>
+                            <div id="loginStrengthBar" class="progress-bar" role="progressbar" style="width: 0%; transition: all 0.3s ease;"></div>
                         </div>
                         <small id="loginStrengthText" class="text-muted d-block text-end" style="font-size: 0.7rem;">Enter password</small>
                     </div>
                     
                     <!-- Remember Me -->
-                    <div class="mb-4 form-check ps-0">
+                    <div class="mb-4 form-check">
                         <div class="d-flex align-items-center gap-2">
-                            <input type="checkbox" class="form-check-input mt-0" id="rememberMe" style="width: 18px; height: 18px; border-radius: 4px; border-color: rgba(0,0,0,0.2);">
+                            <input type="checkbox" class="form-check-input mt-0" id="rememberMe" required style="width: 18px; height: 18px; border-radius: 4px; border-color: rgba(0,0,0,0.2);">
                             <label class="form-check-label text-muted small" for="rememberMe" style="font-size: 0.85rem;">Remember me for 30 days</label>
                         </div>
                     </div>
@@ -159,7 +159,38 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/auth.js"></script>
+    <script src="js/auth.js"></script> 
+    <script>
+        // Live password strength
+        const pwdInput = document.getElementById('loginPassword');
+        const bar = document.getElementById('loginStrengthBar');
+        const strengthText = document.getElementById('loginStrengthText');
+        const rules = {
+            'r-len': v => v.length >= 8,
+            'r-upper': v => /[A-Z]/.test(v),
+            'r-num': v => /[0-9]/.test(v),
+            'r-sym': v => /[^A-Za-z0-9]/.test(v)
+        };
+        const colors = ['#dc3545', '#fd7e14', '#ffc107', '#10b981']; // Red, Orange, Yellow, Emerald Green
+        const labels = ['Weak', 'Fair', 'Good', 'Strong'];
+        
+        pwdInput.addEventListener('input', () => {
+            const v = pwdInput.value;
+            if (v.length === 0) {
+                bar.style.width = '0%';
+                strengthText.textContent = 'Enter password';
+                return;
+            }
+            let passed = 0;
+            Object.values(rules).forEach(fn => {
+                if (fn(v)) passed++;
+            });
+            bar.style.width = (passed / 4 * 100) + '%';
+            bar.style.setProperty('background-color', colors[passed - 1] || 'transparent', 'important');
+            strengthText.textContent = labels[passed - 1] || 'Very Weak';
+            strengthText.style.color = colors[passed - 1] || 'inherit';
+        });
+    </script>
 </body>
 </html>
 

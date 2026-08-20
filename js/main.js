@@ -89,13 +89,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             loop: true,
             slidesPerView: 1,
             spaceBetween: 30,
+            speed: 4000,
+            allowTouchMove: false,
+            loopAdditionalSlides: 5,
             autoplay: {
-                delay: 4000,
+                delay: 0,
                 disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
             },
             breakpoints: {
                 768: {
@@ -108,3 +107,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 });
+
+
+
+

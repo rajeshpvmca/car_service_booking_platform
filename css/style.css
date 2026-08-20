@@ -428,3 +428,22 @@ footer h3, footer h5 {
 .footer-contact-link:hover { color: var(--primary-color) !important; }
 .footer-contact-link:hover i { transform: scale(1.1); transition: transform 0.3s ease; }
 
+
+.social-icon-btn.facebook { background-color: #1877f2; }
+.social-icon-btn.facebook:hover { background-color: #166fe5; transform: translateY(-3px) scale(1.1); box-shadow: 0 5px 15px rgba(24, 119, 242, 0.4); }
+.social-icon-btn.twitter { background-color: #000000; }
+.social-icon-btn.twitter:hover { background-color: #333333; transform: translateY(-3px) scale(1.1); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); }
+
+
+/* New Footer Social Icons */
+.footer-social-icon { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background-color: rgba(37, 99, 235, 0.1); color: var(--primary-color); text-decoration: none; transition: all 0.3s ease; }
+.footer-social-icon i { font-size: 1.1rem; transition: all 0.3s ease; }
+.footer-social-icon:hover { background-color: var(--primary-color); color: #ffffff; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3); }
+
+
+.footer-social-icon i { color: inherit !important; -webkit-text-fill-color: inherit !important; }
+
+
+/* Continuous Testimonial Swiper Marquee */
+.testimonials-swiper .swiper-wrapper { transition-timing-function: linear !important; }
+
